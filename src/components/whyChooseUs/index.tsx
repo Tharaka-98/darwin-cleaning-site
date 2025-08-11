@@ -45,7 +45,7 @@ export default function WhyChooseUsComponent() {
         <div className="font-nunito font-medium md:text-[24px] lg:text-[40px]">
           Quality Professional
         </div>
-        <div className="text-[32px] mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold leading-snug ">
+        <div className="text-[32px] text-black mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold leading-snug ">
           Why Choose Us
         </div>
         <p className="text-gray-600 font-ubuntu text-[14px] mt-2 md:mt-4 xl:mt-6 md:text-[18px] lg:text-[22px] mb-12">

@@ -75,7 +75,7 @@ export default function Header() {
                   <div key={srv.label} className="px-1">
                     <Link
                       href={srv.href}
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-2 text-black hover:text-white hover:bg-[#003678]"
                       onClick={() => setDesktopServicesOpen(false)} // close dropdown on click
                     >
                       {srv.label}
@@ -95,7 +95,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/quote-section"
             className="hover:text-blue-600 lg:text-[20px] lg:font-medium md:text-[14px] font-medium"
           >
             Contact
@@ -153,7 +153,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/quote-section"
             className="block py-2"
             onClick={handleMobileLinkClick}
           >
