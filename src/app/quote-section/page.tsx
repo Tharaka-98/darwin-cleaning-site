@@ -25,7 +25,7 @@ export default function QuoteSection() {
   };
 
   return (
-    <section className="relative w-full mt-66 py-20 px-6 bg-white text-center">
+    <section className="relative w-full mt-12 md:mt-28 py-20 px-6 bg-white text-center">
       <div className="max-w-2xl mx-auto bg-gray-50 p-8 rounded shadow relative">
         <h2 className="text-2xl font-bold mb-6">Get a Free Quote</h2>
         <form onSubmit={handleSubmit} className="space-y-4">

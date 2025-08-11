@@ -38,9 +38,9 @@ export default function Header() {
     <nav className="absolute mx-auto w-full h-fit backdrop-blur-lg bg-gradient-to-b from-white to-transparent shadow-md top-0 left-0 right-0 z-90">
       <div className="max-w-7xl font-poppins mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-blue-600">
+        <Link href="/">
           <Image
-            src="/images/logo2.png"
+            src="/images/logo.png"
             alt="Logo"
             width={100}
             height={50}
