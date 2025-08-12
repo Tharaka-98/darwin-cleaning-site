@@ -1,3 +1,4 @@
+import FiveStarComponent from "@/components/fiveStarSection/FiveStarComponent";
 import HeroSectionComponent from "@/components/heroSection";
 import OurServicesSectionComponent from "@/components/serviceSection";
 import TeamSectionComponent from "@/components/theTeam";
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSectionComponent />
       <WhyChooseUsComponent />
       <TeamSectionComponent />
+      <FiveStarComponent />
       <OurServicesSectionComponent />
     </div>
   );

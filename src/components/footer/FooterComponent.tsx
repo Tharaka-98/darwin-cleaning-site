@@ -93,6 +93,8 @@ export default function Footer() {
               Contacts
             </h3>
             <ul className="md:space-y-2 text-gray-400 flex flex-col gap-2 font-poppins">
+
+              <li className="text-[14px] underline "><Link href="/quote-section">Get a free quote</Link> </li>
               <li className="text-[14px] ">📞 (08) 8297 5210</li>
               <li className="text-[14px] ">
                 📧 admin@southernxcleaning.com.au

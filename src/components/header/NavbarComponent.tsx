@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -24,15 +24,30 @@ export default function Header() {
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
   const toggleDesktopServices = () => setDesktopServicesOpen((prev) => !prev);
   const toggleMobileServices = () => setMobileServicesOpen((prev) => !prev);
 
-  // Close mobile menu when clicking a link
   const handleMobileLinkClick = () => {
     setMenuOpen(false);
     setMobileServicesOpen(false);
   };
+
+  // Close dropdown if clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDesktopServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <nav className="absolute mx-auto w-full h-fit backdrop-blur-lg bg-gradient-to-b from-white to-transparent shadow-md top-0 left-0 right-0 z-90">
@@ -52,15 +67,15 @@ export default function Header() {
         <div className="hidden md:flex items-center space-x-12 pr-6">
           <Link
             href="/"
-            className="hover:text-blue-600 lg:text-[20px] lg:font-medium md:text-[14px] font-medium"
+            className="hover:text-blue-600 lg:text-[20px] font-medium md:text-[14px]"
           >
             Home
           </Link>
 
-          {/* Services Dropdown - CLICK ONLY */}
-          <div className="relative">
+          {/* Services Dropdown */}
+          <div className="relative" ref={dropdownRef}>
             <button
-              className="flex items-center space-x-1 lg:text-[20px] lg:font-medium md:text-[14px] font-medium"
+              className="flex items-center space-x-1 lg:text-[20px] font-medium md:text-[14px]"
               onClick={toggleDesktopServices}
               type="button"
               aria-haspopup="true"
@@ -70,17 +85,17 @@ export default function Header() {
               <ChevronDown size={16} />
             </button>
             {desktopServicesOpen && (
-              <div className="absolute top-full left-0 mt-2 backdrop-blur-lg bg-white rounded shadow-lg min-w-[250px] z-50">
-                {services.map((srv) => (
-                  <div key={srv.label} className="px-1">
+              <div className="absolute top-full left-0 mt-2 backdrop-blur-lg bg-white rounded shadow-lg min-w-[280px] z-50">
+                {services.map((srv, index) => (
+                  <div key={srv.label}>
                     <Link
                       href={srv.href}
-                      className="block px-4 py-2 text-black hover:text-white hover:bg-[#003678]"
-                      onClick={() => setDesktopServicesOpen(false)} // close dropdown on click
+                      className="flex px-3 py-2 h-[42px] justify-start items-center text-[15px] text-black hover:text-white hover:bg-[#003678]"
+                      onClick={() => setDesktopServicesOpen(false)}
                     >
                       {srv.label}
                     </Link>
-                    <hr />
+                    {index < services.length - 1 && <hr />}
                   </div>
                 ))}
               </div>
@@ -89,14 +104,13 @@ export default function Header() {
 
           <Link
             href="/about"
-            className="hover:text-blue-600 lg:text-[20px] lg:font-medium md:text-[14px] font-medium"
+            className="hover:text-blue-600 lg:text-[20px] font-medium md:text-[14px]"
           >
             About
           </Link>
-
           <Link
             href="/quote-section"
-            className="hover:text-blue-600 lg:text-[20px] lg:font-medium md:text-[14px] font-medium"
+            className="hover:text-blue-600 lg:text-[20px] font-medium md:text-[14px]"
           >
             Contact
           </Link>
@@ -116,10 +130,9 @@ export default function Header() {
           <Link href="/" className="block py-2" onClick={handleMobileLinkClick}>
             Home
           </Link>
-
           <div className="relative py-2">
             <button
-              className="flex justify-between items-center w-full space-x-1 lg:text-[20px] lg:font-medium md:text-[14px] font-medium"
+              className="flex justify-between items-center w-full space-x-1 lg:text-[20px] font-medium md:text-[14px]"
               onClick={toggleMobileServices}
               type="button"
               aria-haspopup="true"
@@ -143,7 +156,6 @@ export default function Header() {
               </div>
             )}
           </div>
-
           <Link
             href="/about"
             className="block py-2"
@@ -151,7 +163,6 @@ export default function Header() {
           >
             About
           </Link>
-
           <Link
             href="/quote-section"
             className="block py-2"

@@ -42,7 +42,7 @@ export default function WhyChooseUsComponent() {
     <section id="choose-us" className="pb-16 px-10 lg:px-20 pt-10 bg-white text-center">
       {/* Subheading + Heading */}
       <div className=" text-start mx-auto ">
-        <div className="font-nunito font-medium md:text-[24px] lg:text-[40px]">
+        <div className="font-nunito font-medium md:text-[24px] lg:text-[30px]">
           Quality Professional
         </div>
         <div className="text-[32px] text-black mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold leading-snug ">
