@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Dot } from "lucide-react";
 import Image from "next/image";
 
 const services = [
@@ -19,10 +19,153 @@ const services = [
   { label: "Commercial Cleaning", href: "/services/commercial" },
 ];
 
+type SubItem = { label: string; href: string };
+type MainItem = { id: string; label: string; href?: string; sub: SubItem[] };
+
+const MAIN_MENU: MainItem[] = [
+  {
+    id: "carpet-upholstery",
+    label: "Carpet and Upholstery Cleaning",
+    href: "/services/carpet-upholstery",
+    sub: [
+      {
+        label: "Stain & Odour Neutraliser",
+        href: "/services/carpet-upholstery/stain-odour-neutraliser",
+      },
+      {
+        label: "Deep Steam Carpet Clean",
+        href: "/services/carpet-upholstery/carpet-steam-clean",
+      },
+    ],
+  },
+  {
+    id: "tile-grout",
+    label: "Tile & Grout Cleaning",
+    href: "/services/tile-grout",
+    sub: [],
+  },
+  { id: "airbnb", label: "Airbnb Cleaning", href: "/services/airbnb", sub: [] },
+  {
+    id: "end-of-lease",
+    label: "End of Lease Cleaning",
+    href: "/services/end-of-lease",
+    sub: [
+      {
+        label: "Full Vacate Clean",
+        href: "/services/end-of-lease/full-vacate",
+      },
+      {
+        label: "Walls, Skirting & Details",
+        href: "/services/end-of-lease/walls-skirting",
+      },
+      {
+        label: "Oven & Rangehood Detail",
+        href: "/services/end-of-lease/oven-rangehood-detail",
+      },
+      {
+        label: "Windows (Inside & Out)",
+        href: "/services/end-of-lease/windows-in-out",
+      },
+      {
+        label: "Carpet Steam (Optional)",
+        href: "/services/end-of-lease/carpet-steam-optional",
+      },
+      {
+        label: "Bond Checklist Compliance",
+        href: "/services/end-of-lease/bond-checklist",
+      },
+    ],
+  },
+  {
+    id: "window-glass",
+    label: "Window and Glass Cleaning",
+    href: "/services/window-glass",
+    sub: [
+      {
+        label: "Inside & Outside Windows",
+        href: "/services/window-glass/inside-outside",
+      },
+      {
+        label: "Tracks & Frames",
+        href: "/services/window-glass/tracks-frames",
+      },
+      { label: "Flyscreens", href: "/services/window-glass/flyscreens" },
+      {
+        label: "High/Hard-to-Reach (Pole)",
+        href: "/services/window-glass/high-reach",
+      },
+      {
+        label: "Glass Balustrades",
+        href: "/services/window-glass/balustrades",
+      },
+      { label: "Mirror Polishing", href: "/services/window-glass/mirrors" },
+    ],
+  },
+  {
+    id: "commercial",
+    label: "Commercial Cleaning",
+    href: "/services/commercial",
+    sub: [
+      {
+        label: "Corporate and Office Cleaning",
+        href: "/services/commercial/office-cleaning",
+      },
+      {
+        label: "Water damage restoration Cleaning",
+        href: "/services/commercial/water-damage-restoration",
+      },
+      {
+        label: "General Cleaning",
+        href: "/services/commercial/general-cleaning",
+      },
+      {
+        label: "Government Department Cleaning",
+        href: "/services/commercial/government",
+      },
+      {
+        label: "Retail incl. Supermarkets & Shopping Centres",
+        href: "/services/commercial/retail",
+      },
+      {
+        label: "Banks & Financial Institutions",
+        href: "/services/commercial/banks",
+      },
+      {
+        label: "Education Institutions",
+        href: "/services/commercial/education",
+      },
+      { label: "Warehouse Cleaning", href: "/services/commercial/warehouse" },
+      {
+        label: "Shipping Ports & Airports",
+        href: "/services/commercial/ports-airports",
+      },
+    ],
+  },
+  {
+    id: "pressure-wash",
+    label: "Pressure Wash Cleaning",
+    href: "/services/pressure-wash",
+    sub: [],
+  },
+  {
+    id: "strip-sealing",
+    label: "Strip & Sealing",
+    href: "/services/strip-sealing",
+    sub: [],
+  },
+];
+
+function cx(...xs: Array<string | false | undefined>) {
+  return xs.filter(Boolean).join(" ");
+}
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+  // which main item’s dropdown is open (desktop)
+  const [openMainId, setOpenMainId] = useState<string | null>(null);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -35,7 +178,7 @@ export default function Header() {
     setMobileServicesOpen(false);
   };
 
-  // Close dropdown if clicking outside
+  // Close "Services" dropdown if clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -49,10 +192,18 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // ESC closes any open main dropdown
+  useEffect(() => {
+    const onEsc = (e: KeyboardEvent) =>
+      e.key === "Escape" && setOpenMainId(null);
+    window.addEventListener("keydown", onEsc);
+    return () => window.removeEventListener("keydown", onEsc);
+  }, []);
+
   return (
-    <nav className="absolute mx-auto w-full h-fit backdrop-blur-lg bg-gradient-to-b from-white to-transparent shadow-md top-0 left-0 right-0 z-90">
-      <div className="max-w-7xl font-poppins mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
+    <nav className="absolute top-0 left-0 right-0 z-[300] mx-auto w-full bg-white shadow-md">
+      {/* Top bar */}
+      <div className="mx-auto flex items-center justify-between px-4 xl:px-16 font-poppins">
         <Link href="/">
           <Image
             src="/images/logo.png"
@@ -64,18 +215,18 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-12 pr-6">
+        <div className="hidden items-center space-x-6 lg:space-x-12 pr-6 md:flex">
           <Link
             href="/"
-            className="hover:text-blue-600 lg:text-[20px] font-medium md:text-[14px]"
+            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
           >
             Home
           </Link>
 
-          {/* Services Dropdown */}
-          <div className="relative" ref={dropdownRef}>
+          {/* Classic Services Dropdown (your original) */}
+          <div className="relative lg:hidden" ref={dropdownRef}>
             <button
-              className="flex items-center space-x-1 lg:text-[20px] font-medium md:text-[14px]"
+              className="flex items-center space-x-1 md:text-[14px] lg:text-[20px] font-medium"
               onClick={toggleDesktopServices}
               type="button"
               aria-haspopup="true"
@@ -85,12 +236,12 @@ export default function Header() {
               <ChevronDown size={16} />
             </button>
             {desktopServicesOpen && (
-              <div className="absolute top-full left-0 mt-2 backdrop-blur-lg bg-white rounded shadow-lg min-w-[280px] z-50">
+              <div className="absolute left-0 top-full  mt-2 min-w-[280px] rounded bg-white backdrop-blur-lg shadow-lg">
                 {services.map((srv, index) => (
                   <div key={srv.label}>
                     <Link
                       href={srv.href}
-                      className="flex px-3 py-2 h-[42px] justify-start items-center text-[15px] text-black hover:text-white hover:bg-[#003678]"
+                      className="flex h-[42px] items-center justify-start px-3 py-2 text-[15px] text-black hover:bg-[#003678] hover:text-white"
                       onClick={() => setDesktopServicesOpen(false)}
                     >
                       {srv.label}
@@ -104,13 +255,25 @@ export default function Header() {
 
           <Link
             href="/about"
-            className="hover:text-blue-600 lg:text-[20px] font-medium md:text-[14px]"
+            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
           >
-            About
+            About Us
+          </Link>
+          <Link
+            href="#choose-us"
+            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
+          >
+            Why Choose US ?
+          </Link>
+          <Link
+            href="#tips"
+            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
+          >
+            Cleaning Tips
           </Link>
           <Link
             href="/quote-section"
-            className="hover:text-blue-600 lg:text-[20px] font-medium md:text-[14px]"
+            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
           >
             Contact
           </Link>
@@ -124,15 +287,85 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ===== MAIN SERVICES LINE (Desktop) – with per-item dropdowns ===== */}
+      <div className="relative hidden  justify-start items-center px-4 lg:flex border-t border-gray-200 bg-[]">
+        <div className=" " onMouseLeave={() => setOpenMainId(null)}>
+          <ul className="flex gap-4 px-4 py-2 text-[15px] font-medium z-[300]">
+            {MAIN_MENU.map((m, index) => {
+              const open = openMainId === m.id;
+              const hasSub = m.sub && m.sub.length > 0;
+              return (
+                <>
+                  <li
+                    key={m.id}
+                    className="relative"
+                    onMouseEnter={() => setOpenMainId(m.id)}
+                  >
+                    <Link
+                      href={m.href ?? "#"}
+                      onFocus={() => setOpenMainId(m.id)}
+                      aria-haspopup={hasSub ? "true" : undefined}
+                      aria-expanded={hasSub ? open : undefined}
+                      className={cx(
+                        "inline-flex z-[300] font-poppins items-center gap-1 py-2 transition",
+                        open
+                          ? "text-pink-700"
+                          : "text-gray-800 hover:text-pink-700"
+                      )}
+                    >
+                      {m.label}
+                      {hasSub && (
+                        <ChevronDown
+                          className={cx(
+                            "h-4 w-4 transition",
+                            open && "rotate-180"
+                          )}
+                        />
+                      )}
+                    </Link>
+
+                    {/* Item dropdown */}
+                    {hasSub && open && (
+                      <div className="absolute left-0 top-full  z-[300] mt-2 min-w-[280px] rounded border bg-white shadow-xl">
+                        <ul className="py-2">
+                          {m.sub.map((s) => (
+                            <li key={s.href}>
+                              <Link
+                                href={s.href}
+                                className="group flex items-center gap-2 px-4 py-2 hover:bg-pink-50"
+                              >
+                                <Dot className="h-5 w-5 text-pink-600" />
+                                <span className="text-[15px] leading-6  text-gray-900 group-hover:text-pink-700">
+                                  {s.label}
+                                </span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </li>
+                  {index < MAIN_MENU.length - 1 && (
+                    <li className="text-gray-400 h-10 w-px bg-gray-400 self-center"></li>
+                  )}
+                </>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
+      {/* ===== Mobile Menu ===== */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
+        <div className="space-y-2 font-poppins px-4 pb-4 md:hidden">
           <Link href="/" className="block py-2" onClick={handleMobileLinkClick}>
             Home
           </Link>
+
+          {/* Classic Services list on mobile */}
           <div className="relative py-2">
             <button
-              className="flex justify-between items-center w-full space-x-1 lg:text-[20px] font-medium md:text-[14px]"
+              className="flex w-full items-center justify-between space-x-1 "
               onClick={toggleMobileServices}
               type="button"
               aria-haspopup="true"
@@ -142,7 +375,7 @@ export default function Header() {
               <ChevronDown size={16} />
             </button>
             {mobileServicesOpen && (
-              <div className="pl-4 space-y-1">
+              <div className="space-y-1 pl-4">
                 {services.map((srv) => (
                   <Link
                     key={srv.label}
@@ -156,13 +389,29 @@ export default function Header() {
               </div>
             )}
           </div>
+
           <Link
             href="/about"
             className="block py-2"
             onClick={handleMobileLinkClick}
           >
-            About
+            About Us
           </Link>
+          <Link
+            href="/choose-us"
+            className="block py-2"
+            onClick={handleMobileLinkClick}
+          >
+            Why Choose US ?
+          </Link>
+          <Link
+            href="/tips"
+            className="block py-2"
+            onClick={handleMobileLinkClick}
+          >
+            Cleaning Tips
+          </Link>
+          
           <Link
             href="/quote-section"
             className="block py-2"

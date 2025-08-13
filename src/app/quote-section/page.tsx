@@ -118,27 +118,27 @@ export default function ContactSection() {
   // };
 
   return (
-    <section className="w-full pt-10 md:px-12 pb-8 md:pt-12 px-6 mt-18 lg:mt-32 bg-white">
+    <section className="w-full pt-10 md:px-12 pb-8 md:pt-16 px-6 mt-18 lg:mt-44 xl:mt-40 bg-white">
       <div className="font-poppins text-[28px] md:text-[40px] md:hidden block xl:text-[52px] font-semibold ">Contact Us</div>
       <div className="max-w-8xl mx-auto pt-6  md:pt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-24">
         {/* LEFT SIDE - CONTACT INFO */}
 
         <div className="">
           <div className="mb-3">
-            <h3 className="font-medium text-lg font-poppins ">📞 Phone</h3>
-            <p className="font-poppins">(08) 8297 5210</p>
+            <h3 className="font-medium md:text-lg font-poppins ">📞 Phone</h3>
+            <p className="font-poppins text-[14px] md:text-[16px]">(08) 8297 5210</p>
           </div>
 
           <div className="mb-3">
-            <h3 className="font-medium text-lg font-poppins  ">📧 Email</h3>
-            <p className="font-poppins">admin@southernxcleaning.com.au</p>
+            <h3 className="font-medium md:text-lg font-poppins  ">📧 Email</h3>
+            <p className="font-poppins text-[14px] md:text-[16px]">admin@southernxcleaning.com.au</p>
           </div>
 
           <div className="mb-6">
-            <div className="font-medium text-lg font-poppins ">
+            <div className="font-medium md:text-lg font-poppins ">
               📍 Head Office Address
             </div>
-            <p className="font-poppins">
+            <p className="font-poppins text-[14px] md:text-[16px]">
               14-18 Rosslyn Street, Mile End South SA 5031
             </p>
           </div>
