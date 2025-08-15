@@ -91,7 +91,7 @@ export default function OurServicesSectionComponent() {
 
                 {/* Back */}
                 <div className="absolute inset-0 rounded-xl bg-[#9ea0a1] bg-gradient-to-bl from-[#afecdc] to-transparent backdrop-blur-lg text-white p-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <p className="text-sm font-nunito md:text-base">{service.description}</p>
+                  <p className="text-sm font-nunito border text-[#003678] md:text-base">{service.description}</p>
                 </div>
               </div>
             </Link>
@@ -102,7 +102,7 @@ export default function OurServicesSectionComponent() {
         <div className="mt-10 text-center">
           <Link
             href="/services"
-            className="px-6 py-3 bg-[#003678] text-white font-semibold rounded-lg shadow hover:bg-[#002655] transition-colors"
+            className="px-6 py-3 hover:bg-[#003678] hover:text-white text-[#003678] border border-[#003678] font-semibold rounded-lg shadow transition-colors"
           >
             View All Services
           </Link>
