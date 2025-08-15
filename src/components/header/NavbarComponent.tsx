@@ -263,13 +263,13 @@ export default function Header() {
           </div>
 
           <Link
-            href="/about-us"
+            href="/#team"
             className="md:text-[14px] hover:underline xl:text-[20px] font-medium hover:text-[#a0e06b]"
           >
             About Us
           </Link>
           <Link
-            href="#choose-us"
+            href="/#choose-us"
             className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#a0e06b]"
           >
             Why Choose US ?
