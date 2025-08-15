@@ -3,7 +3,7 @@ import { Check, Send, Leaf } from "lucide-react";
 
 const features = [
   {
-    icon: <Check className="w-10 h-10 lg:w-14 lg:h-14 text-[#003678]" />,
+    icon: <Check className="w-10 h-10 lg:w-14 lg:h-14 text-[#44a087]" />,
     title: "Reliable & Trustworthy",
     description: (
       <>
@@ -14,7 +14,7 @@ const features = [
     ),
   },
   {
-    icon: <Send className="w-10 h-10 lg:w-14 lg:h-14 text-[#003678]" />,
+    icon: <Send className="w-10 h-10 lg:w-14 lg:h-14 text-[#44a087]" />,
     title: "24 Hour Service",
     description: (
       <>
@@ -25,7 +25,7 @@ const features = [
     ),
   },
   {
-    icon: <Leaf className="w-10 h-10 lg:w-14 lg:h-14 text-[#003678]" />,
+    icon: <Leaf className="w-10 h-10 lg:w-14 lg:h-14 text-[#44a087]" />,
     title: "Eco-Friendly",
     description: (
       <>
@@ -58,16 +58,16 @@ export default function WhyChooseUsComponent() {
       <div className="max-w-7xl mx-auto grid gap-4 lg:gap-12 md:grid-cols-3 ">
         {features.map((feature, idx) => (
           <div
-            className="space-y-4 flex flex-col  border hover:-translate-y-4 transform transition-all duration-300 ease-in-out border-black/20 backdrop-blur-lg rounded-2xl p-4 shadow-[0_10px_10px_#003678] hover:shadow-[0_8px_30px_#003678]"
+            className="space-y-4 flex flex-col  border hover:-translate-y-4 transform transition-all duration-300 ease-in-out border-[#40efc0] backdrop-blur-lg rounded-2xl p-4 shadow-[0_10px_10px_#afecdc] hover:shadow-[0_8px_30px_#40efc0]"
             key={idx}
           >
             <div className="h-1/3">
               <div className="flex justify-center">{feature.icon}</div>
-              <h3 className="text-xl mt-2 lg:mt-4 lg:text-[24px] font-nunito font-bold text-[#000]">
+              <h3 className="text-xl mt-2 lg:mt-4 lg:text-[24px] font-nunito font-bold text-[#44a087]">
                 {feature.title}
               </h3>
             </div>
-            <p className="text-[#000] text-justify h-2/3 font-ubuntu px-3 text-sm lg:text-[18px] xl:text-[20px] max-w-sm mx-auto">
+            <p className="text-[#5c886e] text-justify h-2/3 font-ubuntu px-3 text-sm lg:text-[18px] xl:text-[20px] max-w-sm mx-auto">
               {feature.description}
             </p>
           </div>

@@ -7,7 +7,9 @@ interface GradientOverlayProps {
 const GradientOverlay: React.FC<GradientOverlayProps> = ({ className }) => {
   return (
     <div
-      className={`w-full absolute h-[500px] bg-gradient-to-b from-transparent to-[#003678] ${className || ""}`}
+      className={`w-full absolute h-[500px] bg-gradient-to-bl from-transparent via-transparent to-[#afecdc] ${
+        className || ""
+      }`}
     />
   );
 };

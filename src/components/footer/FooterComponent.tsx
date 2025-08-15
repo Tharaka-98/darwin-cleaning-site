@@ -60,7 +60,10 @@ export default function Footer() {
             </h3>
             <ul className="md:space-y-2  text-gray-400 font-poppins">
               <li className="text-[14px] ">
-                <Link href="/about">About</Link>
+                <Link href="/">Home</Link>
+              </li>
+              <li className="text-[14px] ">
+                <Link href="/#about-us">About</Link>
               </li>
               <li className="text-[14px] ">
                 <Link href="/quote-section">Contact</Link>

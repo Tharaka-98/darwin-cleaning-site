@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function TeamSectionComponent() {
   return (
-    <section className="relative w-full h-screen md:h-[600px] overflow-hidden">
+    <section id="team" className="relative w-full h-screen md:h-[600px] overflow-hidden">
       {/* Background Image */}
       <Image
         src="/images/aboutUs.jpeg" // Replace with your actual image path in public folder
