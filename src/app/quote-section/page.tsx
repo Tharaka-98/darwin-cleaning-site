@@ -118,7 +118,7 @@ export default function ContactSection() {
   // };
 
   return (
-    <section className="w-full pt-10 md:px-12 pb-8 md:pt-16 px-6 mt-18 lg:mt-44 xl:mt-40 bg-white">
+    <section className="w-full pt-10 md:px-12 pb-8 md:pt-12 px-6 mt-18 lg:mt-54 xl:mt-54 bg-white">
       <div className="font-poppins text-[28px] md:text-[40px] md:hidden block xl:text-[52px] font-semibold ">Contact Us</div>
       <div className="max-w-8xl mx-auto pt-6  md:pt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-24">
         {/* LEFT SIDE - CONTACT INFO */}

@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X, Dot } from "lucide-react";
 import Image from "next/image";
+import { IoCall } from "react-icons/io5";
 
 const services = [
   {
@@ -213,12 +214,20 @@ export default function Header() {
             className="h-24 w-16 lg:h-36 lg:w-24"
           />
         </Link>
+        <div className="md:hidden flex lg:flex gap-2 md:flex-col lg:flex-row">
+          <div className="text-pink-700 text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl">
+            <IoCall /> 1300 089 845
+          </div>
+          <div className="text-pink-700 text-[10px] lg:text-[16px] hover:bg-pink-700 hover:text-white cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
+            <Link href="quote-section">Click here for a quote</Link>
+          </div>
+        </div>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center space-x-6 lg:space-x-12 pr-6 md:flex">
+        <div className="hidden items-center space-x-6 xl:space-x-12 pr-6 md:flex">
           <Link
             href="/"
-            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
+            className="md:text-[14px] hover:underline rounded-xl  xl:text-[20px] font-medium hover:text-[#a0e06b]"
           >
             Home
           </Link>
@@ -226,7 +235,7 @@ export default function Header() {
           {/* Classic Services Dropdown (your original) */}
           <div className="relative lg:hidden" ref={dropdownRef}>
             <button
-              className="flex items-center space-x-1 md:text-[14px] lg:text-[20px] font-medium"
+              className="flex items-center hover:underline space-x-1 md:text-[14px] lg:text-[20px] font-medium"
               onClick={toggleDesktopServices}
               type="button"
               aria-haspopup="true"
@@ -254,28 +263,28 @@ export default function Header() {
           </div>
 
           <Link
-            href="/about"
-            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
+            href="/about-us"
+            className="md:text-[14px] hover:underline xl:text-[20px] font-medium hover:text-[#a0e06b]"
           >
             About Us
           </Link>
           <Link
             href="#choose-us"
-            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
+            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#a0e06b]"
           >
             Why Choose US ?
           </Link>
           <Link
-            href="#tips"
-            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
+            href="/cleaning-tips"
+            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#a0e06b]"
           >
             Cleaning Tips
           </Link>
           <Link
-            href="/quote-section"
-            className="md:text-[14px] xl:text-[20px] font-medium hover:text-[#a0e06b]"
+            href="/services"
+            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#a0e06b]"
           >
-            Contact
+            Services
           </Link>
         </div>
 
@@ -284,6 +293,27 @@ export default function Header() {
           <button onClick={toggleMenu} aria-label="Toggle menu" type="button">
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+      </div>
+      {/* ToDo:- make a text rotation ribon here using below text */}
+      {/* Test:- Explore our main cleaning services tailored to your needs. Hover over a card to learn more. */}
+      <div className="hidden lg:flex items-center overflow-hidden">
+        {/* Marquee-style Scrolling Text */}
+        <div className="scrolling-text-container bg-gradient-to-r from-[#c9f6a1] via-[#eaf3e2] to-[#c9f6a1] w-full">
+          <div className="scrolling-text whitespace-nowrap py-1 text-[20px] font-nunito font-semibold text-[#67a038] animate-marquee">
+            <div className="inline-block mr-4">
+              Explore our main cleaning services tailored to your needs. Hover
+              below a card to learn more. |
+            </div>
+            <div className="inline-block mr-4 flex-row justify-center items-center">
+              📞 1300 089 845 |
+            </div>
+            <div className="inline-block">
+              <Link href="/quote-section" className="text-pink-700 underline">
+                Get A Free Quote
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -391,27 +421,27 @@ export default function Header() {
           </div>
 
           <Link
-            href="/about"
+            href="/#team"
             className="block py-2"
             onClick={handleMobileLinkClick}
           >
             About Us
           </Link>
           <Link
-            href="/choose-us"
+            href="/#choose-us"
             className="block py-2"
             onClick={handleMobileLinkClick}
           >
             Why Choose US ?
           </Link>
           <Link
-            href="/tips"
+            href="/cleaning-tips"
             className="block py-2"
             onClick={handleMobileLinkClick}
           >
             Cleaning Tips
           </Link>
-          
+
           <Link
             href="/quote-section"
             className="block py-2"

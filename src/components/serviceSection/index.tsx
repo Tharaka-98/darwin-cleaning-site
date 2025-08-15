@@ -8,41 +8,49 @@ export default function OurServicesSectionComponent() {
     {
       title: 'Carpet and Upholstery Cleaning',
       image: '/images/carpet2.jpg',
+      href: '/services/carpet-upholstery',
       description: 'Deep cleaning for carpets and furniture to remove dirt and stains.',
     },
     {
       title: 'Tile & Grout Cleaning',
       image: '/images/tail1.jpg',
+      href: '/services/tile-grout',
       description: 'Restore the shine of your tiles and clean stubborn grout lines.',
     },
     {
       title: 'Airbnb Cleaning',
       image: '/images/airbnb.jpeg',
+      href: '/services/airbnb',
       description: 'Quick and thorough cleaning for your short-term rental guests.',
     },
     {
       title: 'End of Lease Cleaning',
       image: '/images/eol.jpg',
+      href: '/services/end-of-lease',
       description: 'Ensure you get your bond back with our complete move-out cleaning.',
     },
     {
       title: 'Pressure Wash Cleaning',
       image: '/images/pressure1.jpg',
+      href: '/services/pressure-wash',
       description: 'Blast away dirt, mold, and grime from outdoor surfaces.',
     },
     {
       title: 'Strip & Sealing',
       image: '/images/strip3.jpeg',
+      href: '/services/strip-sealing',
       description: 'Protect and enhance your floors with our strip & seal service.',
     },
     {
       title: 'Window and Glass Cleaning',
       image: '/images/glass1.jpeg',
+      href: '/services/window-glass',
       description: 'Crystal-clear results for all your windows and glass surfaces.',
     },
     {
       title: 'Commercial Cleaning',
       image: '/images/comm1.jpeg',
+      href: '/services/commercial',
       description: 'Professional cleaning solutions for your business premises.',
     },
   ];
@@ -62,7 +70,7 @@ export default function OurServicesSectionComponent() {
           {majorServices.map((service, index) => (
             <Link
               key={index}
-              href="/services"
+              href={service.href}
               className="group [perspective:1000px] h-64 block"
             >
               <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -82,7 +90,7 @@ export default function OurServicesSectionComponent() {
                 </div>
 
                 {/* Back */}
-                <div className="absolute inset-0 rounded-xl bg-[#9ea0a1] bg-gradient-to-b from-[#003678] to-transparent backdrop-blur-lg text-white p-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div className="absolute inset-0 rounded-xl bg-[#9ea0a1] bg-gradient-to-bl from-[#afecdc] to-transparent backdrop-blur-lg text-white p-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
                   <p className="text-sm font-nunito md:text-base">{service.description}</p>
                 </div>
               </div>
