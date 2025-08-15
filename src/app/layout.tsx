@@ -34,7 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* You can use a specific image as favicon */}
         <link rel="icon" href="/images/logo.png" type="image/png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

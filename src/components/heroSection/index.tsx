@@ -40,7 +40,7 @@ export default function HeroSection() {
                 1300 089 845
               </div>
             </div>
-            <div className="bg-[#67a038] px-6 py-2 md:py-4 w-1/2 font-nunito text-white hover:bg-[#587fab] transition">
+            <div className="bg-[#67a038] px-6 py-2 md:py-4 w-1/2 font-nunito text-white hover:bg-[#2e5d38] transition">
               <div className="text-[14px] lg:text-[16px] mb-1">
                 START ONLINE
               </div>
