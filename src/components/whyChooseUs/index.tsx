@@ -58,7 +58,7 @@ export default function WhyChooseUsComponent() {
       <div className="max-w-7xl mx-auto grid gap-4 lg:gap-12 md:grid-cols-3 ">
         {features.map((feature, idx) => (
           <div
-            className="space-y-4 flex flex-col  border hover:-translate-y-4 transform bg-[#ffffff] transition-all duration-300 ease-in-out border-[#40efc0] backdrop-blur-lg rounded-2xl p-4 shadow-[0_10px_10px_#dfe4e2] hover:shadow-[0_8px_30px_#8e9792]"
+            className="space-y-4 flex flex-col  border hover:-translate-y-4 transform bg-[#eef7f6] transition-all duration-300 ease-in-out border-[#c5f3e7]  backdrop-blur-lg rounded-2xl p-4 shadow-[0_10px_10px_#dfe4e2] hover:shadow-[0_8px_30px_#8e9792]"
             key={idx}
           >
             <div className="h-1/3">

@@ -1,5 +1,6 @@
 import FiveStarComponent from "@/components/fiveStarSection/FiveStarComponent";
 import HeroSectionComponent from "@/components/heroSection";
+import ParallaxSection from "@/components/parallaxScroll/ParallaxSectionComponent";
 import OurServicesSectionComponent from "@/components/serviceSection";
 import TestimonialCarousel from "@/components/Testimonials";
 import TeamSectionComponent from "@/components/theTeam";
@@ -13,6 +14,7 @@ export default function Home() {
       <WhyChooseUsComponent />
       <TeamSectionComponent />
       <FiveStarComponent />
+      <ParallaxSection />
       <TestimonialCarousel />
       <OurServicesSectionComponent />
     </div>

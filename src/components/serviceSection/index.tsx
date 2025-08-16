@@ -56,12 +56,12 @@ export default function OurServicesSectionComponent() {
   ];
 
   return (
-    <section id="services" className="py-16 px-10 lg:px-20 bg-[#c5c2c233]">
+    <section id="services" className="md:py-12 py-8 px-10 lg:px-20 bg-[#eff8fa]">
       <div className="max-w-7xl mx-auto ">
         <div className="mb-12 text-start">
           <div className="text-[32px] mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">Our Services</div>
-          <p className="font-ubuntu text-[14px] mt-2 md:mt-4 xl:mt-6 md:text-[18px] lg:text-[22px] mb-12 text-gray-600">
-            Explore our main cleaning services tailored to your needs. Hover over a card to learn more.
+          <p className="font-ubuntu text-[14px] mt-2 md:mt-4  md:text-[18px] lg:text-[22px] mb-12 text-gray-600">
+            Explore our main cleaning services tailored to your needs. Hover over or click a card to learn more.
           </p>
         </div>
 

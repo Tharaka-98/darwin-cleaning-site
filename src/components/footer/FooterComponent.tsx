@@ -16,13 +16,46 @@ const services = [
   { label: "Commercial Cleaning", href: "/services/commercial" },
 ];
 
+const footerSections: Array<{
+  title: string;
+  links: Array<{ label: string; href?: string; underline?: boolean }>;
+}> = [
+  {
+    title: "Quick Links",
+    links: [
+      { label: "Home", href: "/" },
+      { label: "About Us", href: "/#about-us" },
+      { label: "Why Choose Us", href: "/#choose-us" },
+      { label: "Cleaning Tips", href: "/cleaning-tips" },
+      { label: "Contact", href: "/quote-section" },
+      { label: "News", href: "/news" },
+    ],
+  },
+  {
+    title: "Services",
+    links: services, // reuse services array
+  },
+  {
+    title: "Contacts",
+    links: [
+      { label: "Get a free quote", href: "/quote-section", underline: true },
+      { label: "📞 (08) 8297 5210" },
+      { label: "📧 admin@southernxcleaning.com.au" },
+      { label: "📍 14-18 Rosslyn Street, Mile End South SA 5031" },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-[#1e1e1e] text-white text-sm">
+    <footer className="bg-[#2b2b2b] text-white text-sm">
       <div className="mx-auto px-6 lg:px-12 py-10 border-t border-white flex flex-col md:flex-row justify-between items-start gap-16">
         {/* Left:- Logo + Description + Socials */}
-        <div className="md:space-y-4  md:w-1/3 ">
-          <Link href="/" className="flex justify-center flex-col items-center md:items-start">
+        <div className="md:space-y-4 md:w-1/3">
+          <Link
+            href="/"
+            className="flex justify-center flex-col items-center md:items-start"
+          >
             <Image
               src="/images/logo.png"
               alt="Logo"
@@ -53,63 +86,29 @@ export default function Footer() {
 
         {/* Right Section */}
         <div className="flex-col md:flex-row gap-6 flex lg:gap-12 md:w-2/3 justify-between">
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold mb-4 text-[16px] font-poppins">
-              Quick Links
-            </h3>
-            <ul className="md:space-y-2  text-gray-400 font-poppins">
-              <li className="text-[14px] ">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="text-[14px] ">
-                <Link href="/#about-us">About</Link>
-              </li>
-              <li className="text-[14px] ">
-                <Link href="/quote-section">Contact</Link>
-              </li>
-              <li className="text-[14px] ">
-                <Link href="/news">News</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold mb-4 text-[16px] font-poppins">
-              Services
-            </h3>
-            <ul className="md:space-y-2 space-y-1 text-gray-400 font-poppins">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <Link href={service.href} className="text-[14px] ">
-                    {service.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contacts */}
-          <div className="">
-            <h3 className="font-semibold mb-4 text-[16px] font-poppins">
-              Contacts
-            </h3>
-            <ul className="md:space-y-2 text-gray-400 flex flex-col gap-2 font-poppins">
-
-              <li className="text-[14px] underline "><Link href="/quote-section">Get a free quote</Link> </li>
-              <li className="text-[14px] ">📞 (08) 8297 5210</li>
-              <li className="text-[14px] ">
-                📧 admin@southernxcleaning.com.au
-              </li>
-              <li className="text-[14px] ">
-                📍 14-18 Rosslyn Street, Mile End South SA 5031
-              </li>
-            </ul>
-            {/* <div>
-              Proudly Powered By tit98Solutions
-            </div> */}
-          </div>
+          {footerSections.map((section, idx) => (
+            <div key={idx}>
+              <h3 className="font-semibold mb-4 text-[16px] font-poppins">
+                {section.title}
+              </h3>
+              <ul className="md:space-y-2 space-y-1 text-gray-400 font-poppins">
+                {section.links.map((link, i) => (
+                  <li key={i} className="text-[14px] hover:text-white ">
+                    {link.href ? (
+                      <Link
+                        href={link.href}
+                        className={`${link.underline ? "underline" : ""}`}
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      link.label
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 
