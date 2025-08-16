@@ -69,7 +69,7 @@ export default function LocallyProudSection() {
             <Link
               href="/quote-section"
               aria-label="Get in touch"
-              className="inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold text-white shadow-md transition
+              className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-base font-semibold text-white shadow-md transition
                          bg-[#1ca79b] hover:bg-[#159086] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1ca79b]"
             >
               Get in Touch
