@@ -24,9 +24,8 @@ export default function HeroSection() {
             <h2 className="text-[14px] mt-2 md:mt-0 md:text-[20px] lg:text-[20px] xl:text-[24px] font-nunito font-light tracking-wide">
               NOBODY DOES IT BETTER
             </h2>
-            <div className="xl:text-[20px]  font-nunito font-light tracking-wide">
-              Imagine more time to chase your dreams, without a to-do list
-              stealing your spotlight.
+            <div className="xl:text-[20px] mt-2 font-nunito font-light tracking-wide">
+            Transform your space with our professional cleaning services – simple, quick, and reliable.🌿
             </div>
           </div>
 
@@ -40,7 +39,7 @@ export default function HeroSection() {
                 1300 089 845
               </div>
             </div>
-            <div className="bg-[#67a038] px-6 py-2 md:py-4 w-1/2 font-nunito text-white hover:bg-[#2e5d38] transition">
+            <div className="bg-[#1ca79b] hover:bg-[#159086] px-6 py-2 md:py-4 w-1/2 font-nunito text-white  transition">
               <div className="text-[14px] lg:text-[16px] mb-1">
                 START ONLINE
               </div>

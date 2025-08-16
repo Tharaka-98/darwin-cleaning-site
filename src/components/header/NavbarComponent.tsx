@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronDown, Menu, X, Dot } from "lucide-react";
 import Image from "next/image";
 import { IoCall } from "react-icons/io5";
+import React from "react";
 
 const services = [
   {
@@ -31,11 +32,11 @@ const MAIN_MENU: MainItem[] = [
     sub: [
       {
         label: "Stain & Odour Neutraliser",
-        href: "/services/carpet-upholstery/stain-odour-neutraliser",
+        href: "/services/carpet-upholstery",
       },
       {
         label: "Deep Steam Carpet Clean",
-        href: "/services/carpet-upholstery/carpet-steam-clean",
+        href: "/services/carpet-upholstery",
       },
     ],
   },
@@ -53,27 +54,27 @@ const MAIN_MENU: MainItem[] = [
     sub: [
       {
         label: "Full Vacate Clean",
-        href: "/services/end-of-lease/full-vacate",
+        href: "/services/end-of-lease",
       },
       {
         label: "Walls, Skirting & Details",
-        href: "/services/end-of-lease/walls-skirting",
+        href: "/services/end-of-lease",
       },
       {
         label: "Oven & Rangehood Detail",
-        href: "/services/end-of-lease/oven-rangehood-detail",
+        href: "/services/end-of-lease",
       },
       {
         label: "Windows (Inside & Out)",
-        href: "/services/end-of-lease/windows-in-out",
+        href: "/services/end-of-lease",
       },
       {
         label: "Carpet Steam (Optional)",
-        href: "/services/end-of-lease/carpet-steam-optional",
+        href: "/services/end-of-lease",
       },
       {
         label: "Bond Checklist Compliance",
-        href: "/services/end-of-lease/bond-checklist",
+        href: "/services/end-of-lease",
       },
     ],
   },
@@ -84,22 +85,22 @@ const MAIN_MENU: MainItem[] = [
     sub: [
       {
         label: "Inside & Outside Windows",
-        href: "/services/window-glass/inside-outside",
+        href: "/services/window-glass",
       },
       {
         label: "Tracks & Frames",
-        href: "/services/window-glass/tracks-frames",
+        href: "/services/window-glass",
       },
-      { label: "Flyscreens", href: "/services/window-glass/flyscreens" },
+      { label: "Flyscreens", href: "/services/window-glass" },
       {
         label: "High/Hard-to-Reach (Pole)",
-        href: "/services/window-glass/high-reach",
+        href: "/services/window-glass",
       },
       {
         label: "Glass Balustrades",
-        href: "/services/window-glass/balustrades",
+        href: "/services/window-glass",
       },
-      { label: "Mirror Polishing", href: "/services/window-glass/mirrors" },
+      { label: "Mirror Polishing", href: "/services/window-glass" },
     ],
   },
   {
@@ -109,36 +110,36 @@ const MAIN_MENU: MainItem[] = [
     sub: [
       {
         label: "Corporate and Office Cleaning",
-        href: "/services/commercial/office-cleaning",
+        href: "/services/commercial",
       },
       {
         label: "Water damage restoration Cleaning",
-        href: "/services/commercial/water-damage-restoration",
+        href: "/services/commercial",
       },
       {
         label: "General Cleaning",
-        href: "/services/commercial/general-cleaning",
+        href: "/services/commercial",
       },
       {
         label: "Government Department Cleaning",
-        href: "/services/commercial/government",
+        href: "/services/commercial",
       },
       {
         label: "Retail incl. Supermarkets & Shopping Centres",
-        href: "/services/commercial/retail",
+        href: "/services/commercial",
       },
       {
         label: "Banks & Financial Institutions",
-        href: "/services/commercial/banks",
+        href: "/services/commercial",
       },
       {
         label: "Education Institutions",
-        href: "/services/commercial/education",
+        href: "/services/commercial",
       },
-      { label: "Warehouse Cleaning", href: "/services/commercial/warehouse" },
+      { label: "Warehouse Cleaning", href: "/services/commercial" },
       {
         label: "Shipping Ports & Airports",
-        href: "/services/commercial/ports-airports",
+        href: "/services/commercial",
       },
     ],
   },
@@ -218,9 +219,10 @@ export default function Header() {
           <div className="text-pink-700 text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl">
             <IoCall /> 1300 089 845
           </div>
-          <div className="text-pink-700 text-[10px] lg:text-[16px] hover:bg-pink-700 hover:text-white cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
-            <Link href="quote-section">Click here for a quote</Link>
+          <div className="text-pink-700 text-[10px] lg:text-[16px]  cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
+            <Link href="quote-section" className="" >Click here for a quote</Link>
           </div>
+          
         </div>
 
         {/* Desktop Nav */}
@@ -325,9 +327,9 @@ export default function Header() {
               const open = openMainId === m.id;
               const hasSub = m.sub && m.sub.length > 0;
               return (
-                <>
+                <React.Fragment key={m.id}>
                   <li
-                    key={m.id}
+                    
                     className="relative"
                     onMouseEnter={() => setOpenMainId(m.id)}
                   >
@@ -358,14 +360,14 @@ export default function Header() {
                     {hasSub && open && (
                       <div className="absolute left-0 top-full  z-[300] mt-2 min-w-[280px] rounded border bg-white shadow-xl">
                         <ul className="py-2">
-                          {m.sub.map((s) => (
-                            <li key={s.href}>
+                          {m.sub.map((s, i) => (
+                            <li key={`${m.id}-${i}`}>
                               <Link
                                 href={s.href}
-                                className="group flex items-center gap-2 px-4 py-2 hover:bg-pink-50"
+                                className="group flex items-center gap-2 px-2 py-2 hover:bg-pink-50"
                               >
                                 <Dot className="h-5 w-5 text-pink-600" />
-                                <span className="text-[15px] leading-6  text-gray-900 group-hover:text-pink-700">
+                                <span className="text-[15px] leading-6 font-poppins font-normal text-gray-900 group-hover:text-pink-700">
                                   {s.label}
                                 </span>
                               </Link>
@@ -378,7 +380,7 @@ export default function Header() {
                   {index < MAIN_MENU.length - 1 && (
                     <li className="text-gray-400 h-10 w-px bg-gray-400 self-center"></li>
                   )}
-                </>
+                </React.Fragment>
               );
             })}
           </ul>

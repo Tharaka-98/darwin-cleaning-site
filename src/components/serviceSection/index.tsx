@@ -102,11 +102,14 @@ export default function OurServicesSectionComponent() {
         <div className="mt-10 text-center">
           <Link
             href="/services"
-            className="px-6 py-3 hover:bg-[#003678] hover:text-white text-[#003678] border border-[#003678] font-semibold rounded-lg shadow transition-colors"
+            className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-base font-semibold text-white shadow-md transition
+                         bg-[#1ca79b] hover:bg-[#159086] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1ca79b]"
+           
           >
             View All Services
           </Link>
         </div>
+        
       </div>
     </section>
   );

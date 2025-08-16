@@ -65,8 +65,7 @@ export default function Footer() {
             />
           </Link>
           <div className="text-gray-400 text-[12px] md:text-[16px] text-center md:text-left font-poppins">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+          Fresh Spaces, Happy Faces – Schedule Your Cleaning Today. <br/> A Cleaner Home Starts Here – Book Now.
           </div>
           <div className="flex justify-center md:justify-start space-x-4 pt-2">
             <Link href="#" className="hover:text-blue-500">
