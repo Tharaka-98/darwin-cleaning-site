@@ -219,7 +219,7 @@ export default function Header() {
           <div className="text-pink-700 text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl">
             <IoCall /> 1300 089 845
           </div>
-          <div className="text-pink-700 text-[10px] lg:text-[16px]  cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
+          <div className="text-pink-700 hover:bg-pink-700 hover:text-white  text-[10px] lg:text-[16px]  cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
             <Link href="quote-section" className="" >Click here for a quote</Link>
           </div>
           
