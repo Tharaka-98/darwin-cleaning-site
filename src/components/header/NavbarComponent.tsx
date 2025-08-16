@@ -227,7 +227,7 @@ export default function Header() {
         <div className="hidden items-center space-x-6 xl:space-x-12 pr-6 md:flex">
           <Link
             href="/"
-            className="md:text-[14px] hover:underline rounded-xl  xl:text-[20px] font-medium hover:text-[#a0e06b]"
+            className="md:text-[14px] hover:underline rounded-xl  xl:text-[20px] font-medium hover:text-[#3da7a4]"
           >
             Home
           </Link>
@@ -235,7 +235,7 @@ export default function Header() {
           {/* Classic Services Dropdown (your original) */}
           <div className="relative lg:hidden" ref={dropdownRef}>
             <button
-              className="flex items-center hover:underline space-x-1 md:text-[14px] lg:text-[20px] font-medium"
+              className="flex items-center hover:underline space-x-1 hover:text-[#3da7a4] md:text-[14px] lg:text-[20px] font-medium"
               onClick={toggleDesktopServices}
               type="button"
               aria-haspopup="true"
@@ -264,25 +264,25 @@ export default function Header() {
 
           <Link
             href="/#team"
-            className="md:text-[14px] hover:underline xl:text-[20px] font-medium hover:text-[#a0e06b]"
+            className="md:text-[14px] hover:underline xl:text-[20px] font-medium hover:text-[#3da7a4]"
           >
             About Us
           </Link>
           <Link
             href="/#choose-us"
-            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#a0e06b]"
+            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
           >
             Why Choose US ?
           </Link>
           <Link
             href="/cleaning-tips"
-            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#a0e06b]"
+            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
           >
             Cleaning Tips
           </Link>
           <Link
             href="/services"
-            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#a0e06b]"
+            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
           >
             Services
           </Link>
@@ -299,7 +299,7 @@ export default function Header() {
       {/* Test:- Explore our main cleaning services tailored to your needs. Hover over a card to learn more. */}
       <div className="hidden lg:flex items-center overflow-hidden">
         {/* Marquee-style Scrolling Text */}
-        <div className="scrolling-text-container bg-gradient-to-r from-[#c9f6a1] via-[#eaf3e2] to-[#c9f6a1] w-full">
+        <div className="scrolling-text-container bg-gradient-to-r from-[#e8f9f7] via-[#eaf3e2] to-[#e8f9f7] w-full">
           <div className="scrolling-text whitespace-nowrap py-1 text-[20px] font-nunito font-semibold text-[#67a038] animate-marquee">
             <div className="inline-block mr-4">
               Explore our main cleaning services tailored to your needs. Hover

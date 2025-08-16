@@ -22,7 +22,7 @@ export default function HeroSection() {
               Clean Space Facilities
             </div>
             <h2 className="text-[14px] mt-2 md:mt-0 md:text-[20px] lg:text-[20px] xl:text-[24px] font-nunito font-light tracking-wide">
-              NO BODY DOES IT BETTER
+              NOBODY DOES IT BETTER
             </h2>
             <div className="xl:text-[20px]  font-nunito font-light tracking-wide">
               Imagine more time to chase your dreams, without a to-do list

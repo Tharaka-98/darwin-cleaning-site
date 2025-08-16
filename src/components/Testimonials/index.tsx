@@ -12,7 +12,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Davis R.",
-    text: "Our cleaning team arrived promptly and started cleaning immediately. They were very friendly and took great care to ensure they did a good job. I'm very impressed with the company so far!...",
+    text: "Your cleaning team arrived promptly and started cleaning immediately. They were very friendly and took great care to ensure they did a good job. I'm very impressed with the company so far!...",
     rating: 5,
   },
   {
@@ -81,17 +81,22 @@ const TestimonialComponent: React.FC = () => {
   const currentTestimonials2 = testimonials[currentIndex];
 
   return (
-    <div id="testimonials" className="w-full flex flex-col gap-6 py-16 px-10 lg:px-20">
+    <div
+      id="testimonials"
+      className="w-full flex flex-col gap-6 pb-4 lg:py-8 xl:py-16 px-10 lg:px-20"
+    >
       {" "}
-      <h1 className="text-[28px] mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">
+      <div className="text-[28px] mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">
         {" "}
-        Hear From Our Clients{" "} 
-        <div className="font-ubuntu text-[16px]  font-normal md:text-[18px] lg:text-[22px] mb-12 text-pink-600">Real Reviews, Real Trust</div>
-      </h1>{" "}
-      
-      <div className="w-full hidden md:block  rounded-lg overflow-hidden">
+        Hear From Our Clients{" "}
+        <div className="font-ubuntu text-[16px]  font-normal md:text-[18px] lg:text-[22px] md:mb-12 text-pink-600">
+          Real Reviews, Real Trust
+        </div>
+      </div>{" "}
+      {/* web view */}
+      <div className="w-full hidden md:block overflow-hidden">
         {" "}
-        <div className="flex justify-between items-center mb-4 gap-2">
+        <div className="flex justify-center items-center mb-4 gap-2 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12">
           {" "}
           <button
             onClick={handlePrev}
@@ -106,7 +111,7 @@ const TestimonialComponent: React.FC = () => {
             {currentTestimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 border-pink-700 border rounded-lg shadow-lg flex flex-col items-center max-w-xs"
+                className="bg-white p-6 border-pink-700 border rounded-3xl shadow-lg flex flex-col items-center max-w-xs"
               >
                 {" "}
                 <div className="flex items-center mb-4">
@@ -142,7 +147,7 @@ const TestimonialComponent: React.FC = () => {
           </button>{" "}
         </div>{" "}
       </div>{" "}
-
+      {/* mobile view */}
       <div className="w-full block md:hidden max-w-6xl  rounded-lg overflow-hidden">
         <div className="flex justify-between items-center mb-4 gap-2">
           <button
@@ -156,27 +161,30 @@ const TestimonialComponent: React.FC = () => {
           <div className="flex space-x-6 ">
             {/* Show 1 testimonial on small screens, 3 testimonials on larger screens */}
 
-              <div
-                key={currentIndex}
-                className="border-pink-700 border p-6 rounded-lg shadow-lg/30 flex flex-col items-center "
-              >
-                <div className="flex items-center mb-4">
-                  <div className="rounded-full bg-pink-500 p-2">
-                    <FaStar className="w-6 h-6 text-white" />
-                  </div>
-                  <p className="ml-3 text-lg font-medium text-gray-800">
-                    {currentTestimonials2.name}
-                  </p>
+            <div
+              key={currentIndex}
+              className="border-pink-700 border p-6 rounded-lg shadow-lg/30 flex flex-col items-center "
+            >
+              <div className="flex items-center mb-4">
+                <div className="rounded-full bg-pink-500 p-2">
+                  <FaStar className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-gray-600 text-sm mb-3">{currentTestimonials2.text}</p>
-                <div className="flex items-center space-x-1">
-                  {[...Array(currentTestimonials2.rating)].map((_, i) => (
-                    <FaStar key={i} className="w-4 h-4 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="mt-2 text-sm text-gray-500">{currentTestimonials2.rating}/5 </p>
+                <p className="ml-3 text-lg font-medium text-gray-800">
+                  {currentTestimonials2.name}
+                </p>
               </div>
-            
+              <p className="text-gray-600 text-sm mb-3">
+                {currentTestimonials2.text}
+              </p>
+              <div className="flex items-center space-x-1">
+                {[...Array(currentTestimonials2.rating)].map((_, i) => (
+                  <FaStar key={i} className="w-4 h-4 text-yellow-400" />
+                ))}
+              </div>
+              <p className="mt-2 text-sm text-gray-500">
+                {currentTestimonials2.rating}/5{" "}
+              </p>
+            </div>
           </div>
 
           <button
@@ -187,7 +195,6 @@ const TestimonialComponent: React.FC = () => {
           </button>
         </div>
       </div>
-
     </div>
   );
 };
