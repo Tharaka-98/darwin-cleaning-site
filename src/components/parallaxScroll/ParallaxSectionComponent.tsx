@@ -17,9 +17,10 @@ const ParallaxSection: React.FC = () => {
       >
         {/* Use currentColor so Tailwind text-* controls the fill */}
         <path
-          fill="currentColor"
-          d="M0,60 C180,120 360,0 540,60 C720,120 900,0 1080,60 C1260,120 1440,0 1440,0 L0,0 Z"
-        />
+  fill="currentColor"
+  d="M0,40 C360,160 1080,-40 1440,80 L1440,0 L0,0 Z"
+/>
+
       </svg>
       <svg
         className="absolute top-0 z-10 left-0 w-full md:hidden block h-[90px] md:h-[80px] text-[#eff8fa] pointer-events-none"

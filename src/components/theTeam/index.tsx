@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function LocallyProudSection() {
   return (
-    <section className="bg-[#eef7f6] flex justify-center px-10 lg:px-20">
+    <section id="team" className="bg-[#eef7f6] flex justify-center px-10 lg:px-20">
       <div className=" max-w-7xl  py-10 md:pt-16 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12">
         {/* Left: circular photo with soft ring & shadow */}
         <div className=" mb-12 w-full max-w-[560px] lg:col-span-5 lg:mb-0">

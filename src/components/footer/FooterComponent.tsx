@@ -24,7 +24,7 @@ const footerSections: Array<{
     title: "Quick Links",
     links: [
       { label: "Home", href: "/" },
-      { label: "About Us", href: "/#about-us" },
+      { label: "About Us", href: "/#team" },
       { label: "Why Choose Us", href: "/#choose-us" },
       { label: "Cleaning Tips", href: "/cleaning-tips" },
       { label: "Contact", href: "/quote-section" },
