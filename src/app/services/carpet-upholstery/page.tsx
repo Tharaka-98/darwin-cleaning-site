@@ -1,11 +1,21 @@
-"use client";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
 
-import { FC } from "react";
+export const metadata: Metadata = {
+  title: "Carpet & Upholstery Cleaning",
+  description:
+    "Deep steam carpet cleaning, stain and odour removal, upholstery cleaning in Darwin.",
+  alternates: { canonical: "/services/carpet-upholstery" },
+  openGraph: {
+    title: `Carpet & Upholstery Cleaning | ${companyInfo.name}`,
+    description: "Professional carpet steam cleaning and upholstery care.",
+    url: "/services/carpet-upholstery",
+  },
+};
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa6";
 
-
-const CarpetUpholsteryPage: FC = () => {
+const CarpetUpholsteryPage = () => {
   const availableServices = [
     "Upholstery Cleaning",
     "Stain & Odour Neutraliser",

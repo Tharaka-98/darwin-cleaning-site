@@ -1,6 +1,18 @@
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "End of Lease Cleaning",
+  description:
+    "Bond-back end of lease cleaning in Darwin. Detailed vacate cleans including ovens, windows, carpets.",
+  alternates: { canonical: "/services/end-of-lease" },
+  openGraph: {
+    title: `End of Lease Cleaning | ${companyInfo.name}`,
+    description: "Professional vacate cleaning to help you get your bond back.",
+    url: "/services/end-of-lease",
+  },
+};
 import { FaCheck } from "react-icons/fa"; // Import the tick icon
 import Image from "next/image"; // Import Image component for the image on the right
 

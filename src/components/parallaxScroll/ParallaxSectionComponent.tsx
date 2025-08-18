@@ -17,10 +17,9 @@ const ParallaxSection: React.FC = () => {
       >
         {/* Use currentColor so Tailwind text-* controls the fill */}
         <path
-  fill="currentColor"
-  d="M0,40 C360,160 1080,-40 1440,80 L1440,0 L0,0 Z"
-/>
-
+          fill="currentColor"
+          d="M0,40 C360,160 1080,-40 1440,80 L1440,0 L0,0 Z"
+        />
       </svg>
       <svg
         className="absolute top-0 z-10 left-0 w-full md:hidden block h-[90px] md:h-[80px] text-[#eff8fa] pointer-events-none"
@@ -40,7 +39,7 @@ const ParallaxSection: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 flex h-full pt-28 md:items-center justify-center px-8 md:px-4">
-        <h1 className="text-[#e6f7fa] font-nws leading-snug text-[24px] md:text-3xl lg:text-[48px] xl:text-6xl font-normal text-center">
+        <h1 className="text-[#e6f7fa] font-nunito leading-snug text-[24px] md:text-3xl lg:text-[48px] xl:text-6xl font-normal text-center">
           Darwin’s Trusted Residential & Commercial Cleaning Experts
         </h1>
       </div>

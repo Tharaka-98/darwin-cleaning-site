@@ -1,6 +1,20 @@
 "use client";
 
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Window & Glass Cleaning",
+  description:
+    "Streak-free interior and exterior window cleaning, tracks, frames and more in Darwin.",
+  alternates: { canonical: "/services/window-glass" },
+  openGraph: {
+    title: `Window & Glass Cleaning | ${companyInfo.name}`,
+    description: "Professional window cleaning for homes and businesses.",
+    url: "/services/window-glass",
+  },
+};
 import { FaCheck } from "react-icons/fa"; // Import the tick icon
 import Image from "next/image"; // Import Image component for the image on the right
 
@@ -12,7 +26,7 @@ const WindowGlassCleaningPage: FC = () => {
     "Flyscreens",
     "High/Hard-to-Reach (Pole)",
     "Glass Balustrades",
-    "Mirror Polishing"
+    "Mirror Polishing",
   ];
 
   return (
@@ -20,14 +34,20 @@ const WindowGlassCleaningPage: FC = () => {
       <div className="flex w-full flex-col lg:flex-row gap-8">
         {/* Left Side Content */}
         <div className="flex-1 lg:w-2/3">
-          <h1 className="text-3xl font-semibold text-[#0A2058] font-poppins mb-6">Window and Glass Cleaning</h1>
+          <h1 className="text-3xl font-semibold text-[#0A2058] font-poppins mb-6">
+            Window and Glass Cleaning
+          </h1>
           <p className="xl:text-lg font-nunito text-gray-800 mb-2 xl:mb-4">
-            Our Window and Glass Cleaning service ensures that your windows and glass surfaces are sparkling clean and free of streaks.
+            Our Window and Glass Cleaning service ensures that your windows and
+            glass surfaces are sparkling clean and free of streaks.
           </p>
           <p className="xl:text-lg font-nunito mb-4 text-gray-800">
-            We use safe and effective techniques to clean both interior and exterior windows, including high and hard-to-reach areas.
+            We use safe and effective techniques to clean both interior and
+            exterior windows, including high and hard-to-reach areas.
           </p>
-          <h3 className="text-xl font-semibold font-poppins text-[#0A2058] mb-4">Services Available:</h3>
+          <h3 className="text-xl font-semibold font-poppins text-[#0A2058] mb-4">
+            Services Available:
+          </h3>
           <ul className="list-disc pl-6 space-y-2">
             {availableServices.map((service, index) => (
               <li key={index} className="flex items-center gap-2">

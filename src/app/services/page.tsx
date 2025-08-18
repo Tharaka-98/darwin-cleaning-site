@@ -2,6 +2,20 @@
 "use client";
 
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description:
+    "Explore our full range of residential and commercial cleaning services in Darwin.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: `Our Services | ${companyInfo.name}`,
+    description: "Residential, commercial and specialty cleaning services.",
+    url: "/services",
+  },
+};
 import Link from "next/link";
 
 const MAIN_MENU = [
@@ -56,7 +70,9 @@ const ServicesPage: FC = () => {
             key={service.id}
             className="service-card bg-white shadow-lg rounded-lg p-6 hover:bg-[#f7f7f7] transition duration-300"
           >
-            <h2 className="md:text-xl text-[18px] font-semibold font-poppins text-[#0A2058]">{service.label}</h2>
+            <h2 className="md:text-xl text-[18px] font-semibold font-poppins text-[#0A2058]">
+              {service.label}
+            </h2>
             <p className="mt-4 text-sm md:text-[16px] font-nunito text-gray-600">
               Click below to explore more details about our {service.label}.
             </p>

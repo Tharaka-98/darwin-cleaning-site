@@ -2,6 +2,20 @@
 "use client";
 
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Cleaning Tips",
+  description:
+    "Expert home cleaning tips and checklists from the professionals at Clean Space.",
+  alternates: { canonical: "/cleaning-tips" },
+  openGraph: {
+    title: `Cleaning Tips | ${companyInfo.name}`,
+    description: "Expert cleaning advice to keep your home spotless.",
+    url: "/cleaning-tips",
+  },
+};
 import { PiCheckCircleBold } from "react-icons/pi";
 import { FiCalendar } from "react-icons/fi";
 import Link from "next/link";
@@ -60,7 +74,10 @@ const HomeCleaningTipsPage: FC = () => {
 
             <ul className="mt-6 space-y-4 text-lg text-[#1b2b57]">
               {checklist.map((item) => (
-                <li key={item} className="flex justify-start items-center text-[14px] font-nunito md:text-[16px] gap-3">
+                <li
+                  key={item}
+                  className="flex justify-start items-center text-[14px] font-nunito md:text-[16px] gap-3"
+                >
                   <span className="mt-0.5 font-poppins rounded-full">
                     <PiCheckCircleBold
                       className="h-6 w-6 text-[#FF5A8D]"

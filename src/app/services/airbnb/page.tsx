@@ -1,6 +1,18 @@
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Airbnb Cleaning",
+  description:
+    "Turnover and deep cleaning for short-stay properties in Darwin. Linen changes, disinfection and more.",
+  alternates: { canonical: "/services/airbnb" },
+  openGraph: {
+    title: `Airbnb Cleaning | ${companyInfo.name}`,
+    description: "Reliable Airbnb cleaning and turnovers for hosts.",
+    url: "/services/airbnb",
+  },
+};
 import { FaCheck } from "react-icons/fa"; // Import the tick icon
 import Image from "next/image";
 
