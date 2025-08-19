@@ -6,12 +6,15 @@ import Link from "next/link";
 
 export default function LocallyProudSection() {
   return (
-    <section id="team" className="bg-[#eef7f6] flex justify-center px-10 lg:px-20">
+    <section
+      id="team"
+      className="bg-[#eef7f6] dark:bg-[#0b0f12] flex justify-center px-10 lg:px-20"
+    >
       <div className=" max-w-7xl  py-10 md:pt-16 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12">
         {/* Left: circular photo with soft ring & shadow */}
         <div className=" mb-12 w-full max-w-[560px] lg:col-span-5 lg:mb-0">
-          <div className="relative rounded-full bg-white p-4 shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
-            <div className="rounded-full border-8 border-[#e7f4f2] overflow-hidden">
+          <div className="relative rounded-full bg-white dark:bg-[#0f1216] p-4 shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:shadow-none">
+            <div className="rounded-full border-8 border-[#e7f4f2] dark:border-gray-800 overflow-hidden">
               <Image
                 src="/images/aboutUs.jpeg" // put your image in /public/images/
                 alt="Front exterior of a modern Darwin home"
@@ -26,7 +29,7 @@ export default function LocallyProudSection() {
 
         {/* Right: text + CTA */}
         <div className="lg:col-span-7">
-          <h2 className="mb-6 text-3xl leading-tight text-[#5e5c5c] sm:text-4xl lg:text-5xl">
+          <h2 className="mb-6 text-3xl leading-tight text-[#5e5c5c] dark:text-gray-200 sm:text-4xl lg:text-5xl">
             <span
               className="block font-[500] font-poppins italic"
               // style={{ fontFamily: "Playwrite AU NSW, cursive" }} // or your script font class
@@ -35,7 +38,7 @@ export default function LocallyProudSection() {
             </span>
           </h2>
 
-          <div className="space-y-5 text-[17px] text-justify font-nunito leading-7 text-slate-700">
+          <div className="space-y-5 text-[17px] text-justify font-nunito leading-7 text-slate-700 dark:text-slate-300">
             <p>
               At Clean Space Facilities, we take great pride in supporting and
               caring for our local community. Our Locally Proud initiative is

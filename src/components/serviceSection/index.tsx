@@ -1,67 +1,80 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function OurServicesSectionComponent() {
   const majorServices = [
     {
-      title: 'Carpet and Upholstery Cleaning',
-      image: '/images/carpet2.jpg',
-      href: '/services/carpet-upholstery',
-      description: 'Deep cleaning for carpets and furniture to remove dirt and stains.',
+      title: "Carpet and Upholstery Cleaning",
+      image: "/images/carpet2.jpg",
+      href: "/services/carpet-upholstery",
+      description:
+        "Deep cleaning for carpets and furniture to remove dirt and stains.",
     },
     {
-      title: 'Tile & Grout Cleaning',
-      image: '/images/tail1.jpg',
-      href: '/services/tile-grout',
-      description: 'Restore the shine of your tiles and clean stubborn grout lines.',
+      title: "Tile & Grout Cleaning",
+      image: "/images/tail1.jpg",
+      href: "/services/tile-grout",
+      description:
+        "Restore the shine of your tiles and clean stubborn grout lines.",
     },
     {
-      title: 'Airbnb Cleaning',
-      image: '/images/airbnb.jpeg',
-      href: '/services/airbnb',
-      description: 'Quick and thorough cleaning for your short-term rental guests.',
+      title: "Airbnb Cleaning",
+      image: "/images/airbnb.jpeg",
+      href: "/services/airbnb",
+      description:
+        "Quick and thorough cleaning for your short-term rental guests.",
     },
     {
-      title: 'End of Lease Cleaning',
-      image: '/images/eol.jpg',
-      href: '/services/end-of-lease',
-      description: 'Ensure you get your bond back with our complete move-out cleaning.',
+      title: "End of Lease Cleaning",
+      image: "/images/eol.jpg",
+      href: "/services/end-of-lease",
+      description:
+        "Ensure you get your bond back with our complete move-out cleaning.",
     },
     {
-      title: 'Pressure Wash Cleaning',
-      image: '/images/pressure1.jpg',
-      href: '/services/pressure-wash',
-      description: 'Blast away dirt, mold, and grime from outdoor surfaces.',
+      title: "Pressure Wash Cleaning",
+      image: "/images/pressure1.jpg",
+      href: "/services/pressure-wash",
+      description: "Blast away dirt, mold, and grime from outdoor surfaces.",
     },
     {
-      title: 'Strip & Sealing',
-      image: '/images/strip3.jpeg',
-      href: '/services/strip-sealing',
-      description: 'Protect and enhance your floors with our strip & seal service.',
+      title: "Strip & Sealing",
+      image: "/images/strip3.jpeg",
+      href: "/services/strip-sealing",
+      description:
+        "Protect and enhance your floors with our strip & seal service.",
     },
     {
-      title: 'Window and Glass Cleaning',
-      image: '/images/glass1.jpeg',
-      href: '/services/window-glass',
-      description: 'Crystal-clear results for all your windows and glass surfaces.',
+      title: "Window and Glass Cleaning",
+      image: "/images/glass1.jpeg",
+      href: "/services/window-glass",
+      description:
+        "Crystal-clear results for all your windows and glass surfaces.",
     },
     {
-      title: 'Commercial Cleaning',
-      image: '/images/comm1.jpeg',
-      href: '/services/commercial',
-      description: 'Professional cleaning solutions for your business premises.',
+      title: "Commercial Cleaning",
+      image: "/images/comm1.jpeg",
+      href: "/services/commercial",
+      description:
+        "Professional cleaning solutions for your business premises.",
     },
   ];
 
   return (
-    <section id="services" className="md:py-12 py-8 px-10 lg:px-20 bg-[#eff8fa]">
+    <section
+      id="services"
+      className="md:py-12 py-8 px-10 lg:px-20 bg-[#eff8fa] dark:bg-[#0b0f12]"
+    >
       <div className="max-w-7xl mx-auto ">
         <div className="mb-12 text-start">
-          <div className="text-[32px] mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">Our Services</div>
-          <p className="font-ubuntu text-[14px] mt-2 md:mt-4  md:text-[18px] lg:text-[22px] mb-12 text-gray-600">
-            Explore our main cleaning services tailored to your needs. Hover over or click a card to learn more.
+          <div className="text-[32px] mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold text-black dark:text-white">
+            Our Services
+          </div>
+          <p className="font-ubuntu text-[14px] mt-2 md:mt-4  md:text-[18px] lg:text-[22px] mb-12 text-gray-600 dark:text-gray-300">
+            Explore our main cleaning services tailored to your needs. Hover
+            over or click a card to learn more.
           </p>
         </div>
 
@@ -90,8 +103,10 @@ export default function OurServicesSectionComponent() {
                 </div>
 
                 {/* Back */}
-                <div className="absolute inset-0 rounded-xl bg-[#9ea0a1] bg-gradient-to-bl from-[#afecdc] to-transparent backdrop-blur-lg text-white p-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <p className="text-sm font-nunito border text-[#003678] md:text-base">{service.description}</p>
+                <div className="absolute inset-0 rounded-xl bg-[#9ea0a1] dark:bg-[#1a1f24] bg-gradient-to-bl from-[#afecdc] dark:from-[#0f1720] to-transparent backdrop-blur-lg text-white p-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <p className="text-sm font-nunito border border-transparent dark:border-gray-700 text-[#003678] dark:text-gray-200 md:text-base">
+                    {service.description}
+                  </p>
                 </div>
               </div>
             </Link>
@@ -104,12 +119,10 @@ export default function OurServicesSectionComponent() {
             href="/services"
             className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-base font-semibold text-white shadow-md transition
                          bg-[#1ca79b] hover:bg-[#159086] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1ca79b]"
-           
           >
             View All Services
           </Link>
         </div>
-        
       </div>
     </section>
   );

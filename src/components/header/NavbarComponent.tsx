@@ -203,7 +203,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-[300] mx-auto w-full bg-white shadow-md">
+    <nav className="absolute top-0 left-0 right-0 z-[300] mx-auto w-full bg-white dark:bg-[#0f0f10] shadow-md">
       {/* Top bar */}
       <div className="mx-auto flex items-center justify-between px-4 xl:px-16 font-poppins">
         <Link href="/">
@@ -216,17 +216,19 @@ export default function Header() {
           />
         </Link>
         <div className="md:hidden flex lg:flex gap-2 md:flex-col lg:flex-row">
-          <div className="text-pink-700 text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl">
-            <IoCall /> 1300 089 845
-          </div>
+        <a href="tel:+1300089845" className="text-pink-700 hover:bg-pink-700 hover:text-white text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl">
+  <IoCall /> 1300 089 845
+</a>
+
           <div className="text-pink-700 hover:bg-pink-700 hover:text-white  text-[10px] lg:text-[16px]  cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
-            <Link href="quote-section" className="" >Click here for a quote</Link>
+            <Link href="quote-section" className="">
+              Click here for a quote
+            </Link>
           </div>
-          
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center space-x-6 xl:space-x-12 pr-6 md:flex">
+        <div className="hidden items-center text-black dark:text-gray-100 space-x-6 xl:space-x-12 pr-6 md:flex">
           <Link
             href="/"
             className="md:text-[14px] hover:underline rounded-xl  xl:text-[20px] font-medium hover:text-[#3da7a4]"
@@ -237,7 +239,7 @@ export default function Header() {
           {/* Classic Services Dropdown (your original) */}
           <div className="relative lg:hidden" ref={dropdownRef}>
             <button
-              className="flex items-center hover:underline space-x-1 hover:text-[#3da7a4] md:text-[14px] lg:text-[20px] font-medium"
+              className="flex items-center text-black dark:text-gray-100 hover:underline space-x-1 hover:text-[#3da7a4] md:text-[14px] lg:text-[20px] font-medium"
               onClick={toggleDesktopServices}
               type="button"
               aria-haspopup="true"
@@ -247,7 +249,7 @@ export default function Header() {
               <ChevronDown size={16} />
             </button>
             {desktopServicesOpen && (
-              <div className="absolute left-0 top-full  mt-2 min-w-[280px] rounded bg-white backdrop-blur-lg shadow-lg">
+              <div className="absolute left-0 top-full  text-black dark:text-gray-100 mt-2 min-w-[280px] rounded bg-white dark:bg-[#0f0f10] backdrop-blur-lg shadow-lg border border-gray-100 dark:border-gray-800">
                 {services.map((srv, index) => (
                   <div key={srv.label}>
                     <Link
@@ -266,25 +268,25 @@ export default function Header() {
 
           <Link
             href="/#team"
-            className="md:text-[14px] hover:underline xl:text-[20px] font-medium hover:text-[#3da7a4]"
+            className="md:text-[14px] text-black dark:text-gray-100 hover:underline xl:text-[20px] font-medium hover:text-[#3da7a4]"
           >
             About Us
           </Link>
           <Link
             href="/#choose-us"
-            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
+            className="md:text-[14px] text-black dark:text-gray-100 xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
           >
             Why Choose US ?
           </Link>
           <Link
             href="/cleaning-tips"
-            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
+            className="md:text-[14px] text-black dark:text-gray-100 xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
           >
             Cleaning Tips
           </Link>
           <Link
             href="/services"
-            className="md:text-[14px] xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
+            className="md:text-[14px] text-black dark:text-gray-100 xl:text-[20px] hover:underline font-medium hover:text-[#3da7a4]"
           >
             Services
           </Link>
@@ -301,8 +303,8 @@ export default function Header() {
       {/* Test:- Explore our main cleaning services tailored to your needs. Hover over a card to learn more. */}
       <div className="hidden lg:flex items-center overflow-hidden">
         {/* Marquee-style Scrolling Text */}
-        <div className="scrolling-text-container bg-gradient-to-r from-[#e8f9f7] via-[#eaf3e2] to-[#e8f9f7] w-full">
-          <div className="scrolling-text whitespace-nowrap py-1 text-[20px] font-nunito font-semibold text-[#67a038] animate-marquee">
+        <div className="scrolling-text-container bg-gradient-to-r from-[#e8f9f7] via-[#eaf3e2] to-[#e8f9f7] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 w-full">
+          <div className="scrolling-text whitespace-nowrap py-1 text-[20px] font-nunito font-semibold text-[#67a038] dark:text-green-300 animate-marquee">
             <div className="inline-block mr-4">
               Explore our main cleaning services tailored to your needs. Hover
               below a card to learn more. |
@@ -311,7 +313,10 @@ export default function Header() {
               📞 1300 089 845 |
             </div>
             <div className="inline-block">
-              <Link href="/quote-section" className="text-pink-700 underline">
+              <Link
+                href="/quote-section"
+                className="text-pink-700 dark:text-pink-400 underline"
+              >
                 Get A Free Quote
               </Link>
             </div>
@@ -329,7 +334,6 @@ export default function Header() {
               return (
                 <React.Fragment key={m.id}>
                   <li
-                    
                     className="relative"
                     onMouseEnter={() => setOpenMainId(m.id)}
                   >
@@ -342,7 +346,7 @@ export default function Header() {
                         "inline-flex z-[300] font-poppins items-center gap-1 py-2 transition",
                         open
                           ? "text-pink-700"
-                          : "text-gray-800 hover:text-pink-700"
+                          : "text-gray-800 dark:text-gray-100 hover:text-pink-700"
                       )}
                     >
                       {m.label}
@@ -358,16 +362,16 @@ export default function Header() {
 
                     {/* Item dropdown */}
                     {hasSub && open && (
-                      <div className="absolute left-0 top-full  z-[300] mt-2 min-w-[280px] rounded border bg-white shadow-xl">
+                      <div className="absolute left-0 top-full  z-[300] mt-2 min-w-[280px] rounded border bg-white dark:bg-[#0f0f10] shadow-xl border-gray-100 dark:border-gray-800">
                         <ul className="py-2">
                           {m.sub.map((s, i) => (
                             <li key={`${m.id}-${i}`}>
                               <Link
                                 href={s.href}
-                                className="group flex items-center gap-2 px-2 py-2 hover:bg-pink-50"
+                                className="group flex items-center gap-2 px-2 py-2 hover:bg-pink-50 dark:hover:bg-gray-800"
                               >
                                 <Dot className="h-5 w-5 text-pink-600" />
-                                <span className="text-[15px] leading-6 font-poppins font-normal text-gray-900 group-hover:text-pink-700">
+                                <span className="text-[15px] leading-6 font-poppins font-normal text-gray-900 dark:text-gray-100 group-hover:text-pink-700">
                                   {s.label}
                                 </span>
                               </Link>
@@ -378,7 +382,7 @@ export default function Header() {
                     )}
                   </li>
                   {index < MAIN_MENU.length - 1 && (
-                    <li className="text-gray-400 h-10 w-px bg-gray-400 self-center"></li>
+                    <li className="text-gray-400 dark:text-gray-600 h-10 w-px bg-gray-400 dark:bg-gray-700 self-center"></li>
                   )}
                 </React.Fragment>
               );

@@ -45,8 +45,8 @@ const MAIN_MENU = [
 
 const ServicesPage: FC = () => {
   return (
-    <section className="px-6 lg:px-12 py-10 md:mt-20 mt-20 lg:mt-68 xl:mt-64">
-      <h1 className="text-3xl font-semibold font-poppins text-[#0A2058] mb-6">
+    <section className="px-6 lg:px-12 bg-white dark:bg-[#0b0f12] py-10 md:mt-20 mt-20 lg:mt-68 xl:mt-64">
+      <h1 className="text-3xl font-semibold font-poppins text-[#243056] dark:text-gray-100 mb-6">
         Our Cleaning Services
       </h1>
 
@@ -54,10 +54,12 @@ const ServicesPage: FC = () => {
         {MAIN_MENU.map((service) => (
           <div
             key={service.id}
-            className="service-card bg-white shadow-lg rounded-lg p-6 hover:bg-[#f7f7f7] transition duration-300"
+            className="service-card bg-white dark:bg-[#161a1e] dark:border dark:border-gray-700 shadow-lg dark:shadow-none rounded-lg p-6 hover:bg-[#f6f5f5] dark:hover:bg-[#2a303c] transition duration-300"
           >
-            <h2 className="md:text-xl text-[18px] font-semibold font-poppins text-[#0A2058]">{service.label}</h2>
-            <p className="mt-4 text-sm md:text-[16px] font-nunito text-gray-600">
+            <h2 className="md:text-xl text-[18px] font-semibold font-poppins text-[#243056] dark:text-gray-100">
+              {service.label}
+            </h2>
+            <p className="mt-4 text-sm md:text-[16px] font-nunito text-[#243056] dark:text-gray-100">
               Click below to explore more details about our {service.label}.
             </p>
             <div className="mt-4">

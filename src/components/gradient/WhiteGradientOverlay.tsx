@@ -4,10 +4,14 @@ interface GradientOverlayProps {
   className?: string;
 }
 
-const WhiteGradientOverlay: React.FC<GradientOverlayProps> = ({ className }) => {
+const WhiteGradientOverlay: React.FC<GradientOverlayProps> = ({
+  className,
+}) => {
   return (
     <div
-      className={`w-full h-full bg-gradient-to-b from-white to-transparent ${className || ""}`}
+      className={`w-full h-full bg-gradient-to-b from-white dark:from-[#0f1216] to-transparent ${
+        className || ""
+      }`}
     />
   );
 };
