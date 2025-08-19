@@ -83,10 +83,10 @@ const TestimonialComponent: React.FC = () => {
   return (
     <div
       id="testimonials"
-      className="w-full flex flex-col gap-6 pb-4 lg:py-8 xl:py-16 px-10 lg:px-20"
+      className="w-full bg-[#eff8fa] dark:bg-[#0b0f12] flex flex-col gap-6 pb-4 lg:py-8 xl:py-16 px-10 lg:px-20"
     >
       {" "}
-      <div className="text-[28px] mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">
+      <div className="text-[28px] text-[#243056] dark:text-gray-100  mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">
         {" "}
         Hear From Our Clients{" "}
         <div className="font-ubuntu text-[16px]  font-normal md:text-[18px] lg:text-[22px] md:mb-12 text-pink-600">
@@ -103,7 +103,7 @@ const TestimonialComponent: React.FC = () => {
             className="text-gray-500 hover:text-gray-700"
           >
             {" "}
-            <FaArrowLeft className="w-8 h-8 text-pink-700" />{" "}
+            <FaArrowLeft className="w-8 h-8 text-pink-700 cursor-pointer " />{" "}
           </button>{" "}
           {/* Display 3 testimonials at a time */}{" "}
           <div className="flex space-x-6">
@@ -111,7 +111,7 @@ const TestimonialComponent: React.FC = () => {
             {currentTestimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 border-pink-700 border rounded-3xl shadow-lg flex flex-col items-center max-w-xs"
+                className="bg-white dark:bg-[#12161a] p-6 border-pink-700 border rounded-3xl shadow-lg dark:shadow-none flex flex-col items-center max-w-xs"
               >
                 {" "}
                 <div className="flex items-center mb-4">
@@ -120,12 +120,14 @@ const TestimonialComponent: React.FC = () => {
                     {" "}
                     <FaStar className="w-6 h-6 text-white" />{" "}
                   </div>{" "}
-                  <p className="ml-3 text-lg font-medium text-gray-800">
+                  <p className="ml-3 text-lg font-medium font-poppins text-[#243056] dark:text-gray-100 ">
                     {" "}
                     {testimonial.name}{" "}
                   </p>{" "}
                 </div>{" "}
-                <p className="text-gray-600 text-sm mb-3">{testimonial.text}</p>{" "}
+                <p className="text-gray-600 dark:text-gray-300 font-nunito text-sm mb-3">
+                  {testimonial.text}
+                </p>{" "}
                 <div className="flex items-center space-x-1">
                   {" "}
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -143,7 +145,7 @@ const TestimonialComponent: React.FC = () => {
             className="text-gray-500 hover:text-gray-700"
           >
             {" "}
-            <FaArrowRight className="w-8 h-8 text-pink-700" />{" "}
+            <FaArrowRight className="w-8 h-8 cursor-pointer text-pink-700" />{" "}
           </button>{" "}
         </div>{" "}
       </div>{" "}
@@ -154,7 +156,7 @@ const TestimonialComponent: React.FC = () => {
             onClick={handlePrev2}
             className="text-gray-500 hover:text-gray-700"
           >
-            <FaArrowLeft className="w-8 h-8 text-pink-700" />
+            <FaArrowLeft className="w-8 h-8 text-pink-700 cursor-pointer" />
           </button>
 
           {/* Display testimonials based on screen size */}
@@ -163,17 +165,17 @@ const TestimonialComponent: React.FC = () => {
 
             <div
               key={currentIndex}
-              className="border-pink-700 border p-6 rounded-lg shadow-lg/30 flex flex-col items-center "
+              className="border-pink-700 border p-6 rounded-lg shadow-lg/30 dark:bg-[#12161a] dark:shadow-none flex flex-col items-center "
             >
               <div className="flex items-center mb-4">
                 <div className="rounded-full bg-pink-500 p-2">
                   <FaStar className="w-6 h-6 text-white" />
                 </div>
-                <p className="ml-3 text-lg font-medium text-gray-800">
+                <p className="ml-3 text-lg font-medium text-gray-800 dark:text-gray-100">
                   {currentTestimonials2.name}
                 </p>
               </div>
-              <p className="text-gray-600 text-sm mb-3">
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
                 {currentTestimonials2.text}
               </p>
               <div className="flex items-center space-x-1">
@@ -191,7 +193,7 @@ const TestimonialComponent: React.FC = () => {
             onClick={handleNext2}
             className="text-gray-500 hover:text-gray-700"
           >
-            <FaArrowRight className="w-8 h-8 text-pink-700" />
+            <FaArrowRight className="w-8 h-8 cursor-pointer text-pink-700" />
           </button>
         </div>
       </div>

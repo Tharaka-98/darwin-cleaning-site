@@ -3,7 +3,7 @@ import GradientOverlay from "../gradient/GradientOverlay";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen w-full">
+    <section className="relative h-screen bg-white dark:bg-[#0b0f12] w-full">
       {/* Background Image */}
       <Image
         src="/images/heromob.jpg" // ← Make sure to place your image in /public folder with this name
@@ -14,10 +14,9 @@ export default function HeroSection() {
       />
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 px-6 pt-20 lg:px-10 xl:px-20  z-50 flex lg:pt-48 xl:pt-44 md:pt-36 flex-col md:flex-row justify-center   md:justify-center  text-[#243056]">
+      <div className="absolute inset-0 px-6 pt-20 lg:px-10 xl:px-20  z-50 flex lg:pt-48 xl:pt-44 md:pt-36 flex-col md:flex-row justify-center   md:justify-center  text-[#243056] dark:text-gray-100">
         <div className="w-full md:w-1/2 mb-4">
-       
-          <div className=" z-50 md:mt-28 space-y-4">
+          <div className=" z-50 md:mt-28 space-y-4  ">
             <div className="text-[40px] mb-0 md:text-[50px] font-poppins lg:text-[40px] xl:text-[72px]  font-semibold leading-tight ">
               Clean Space Facilities
             </div>
@@ -25,14 +24,15 @@ export default function HeroSection() {
               NOBODY DOES IT BETTER
             </h2>
             <div className="xl:text-[20px] mt-2 font-nunito font-light tracking-wide">
-            Transform your space with our professional cleaning services – simple, quick, and reliable.🌿
+              Transform your space with our professional cleaning services –
+              simple, quick, and reliable.🌿
             </div>
           </div>
 
           {/* Call to Action */}
-          <div className="md:mt-10 z-100  rounded-2xl mt-6 md:max-w-[400px] lg:max-w-[500px] flex divide-x divide-gray-300 shadow-lg  overflow-hidden text-black text-left text-sm font-medium">
-            <div className="bg-white px-6 py-2 md:py-4 w-1/2">
-              <div className="text-[14px] lg:text-[16px] text-gray-500 font-nunito mb-1">
+          <div className="md:mt-10 z-100 dark:border-gray-700 dark:border rounded-2xl mt-6 md:max-w-[400px] lg:max-w-[500px] flex divide-x divide-gray-300 dark:divide-gray-700 shadow-lg  overflow-hidden text-black dark:text-gray-100 text-left text-sm font-medium">
+            <div className="bg-white  dark:bg-[#0f1216] px-6 py-2 md:py-4 w-1/2">
+              <div className="text-[14px] lg:text-[16px] text-gray-500 dark:text-gray-300 font-nunito mb-1">
                 CALL US
               </div>
               <div className="text-[14px] lg:text-[16px] font-nunito font-semibold">
@@ -51,12 +51,16 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
-
-  
         </div>
 
         <div className=" block md:hidden">
-          <Image src="/images/glassClean.jpeg" alt="Image" width={400} height={400} className="h-[400px] object-cover" />
+          <Image
+            src="/images/glassClean.jpeg"
+            alt="Image"
+            width={400}
+            height={400}
+            className="h-[400px] object-cover"
+          />
         </div>
 
         <div className="w-full md:w-1/2 relative flex justify-end items-end">
