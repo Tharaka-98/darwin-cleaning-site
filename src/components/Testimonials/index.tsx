@@ -83,7 +83,7 @@ const TestimonialComponent: React.FC = () => {
   return (
     <div
       id="testimonials"
-      className="w-full bg-[#eff8fa] dark:bg-[#0b0f12] flex flex-col gap-6 pb-4 lg:py-8 xl:py-16 px-10 lg:px-20"
+      className="w-full bg-[#eff8fa] pt-8 dark:bg-[#0b0f12] flex flex-col gap-6 pb-4 lg:py-8 xl:py-16 px-10 lg:px-20"
     >
       {" "}
       <div className="text-[28px] text-[#243056] dark:text-gray-100  mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">

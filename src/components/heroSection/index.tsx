@@ -4,7 +4,7 @@ import PinkGradientOverlay from "../gradient/PinkGradientOverlay";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[80vh] md:h-screen bg-white dark:bg-[#0b0f12] w-full">
+    <section className="relative  h-screen bg-white dark:bg-[#0b0f12] w-full">
       {/* Background Image */}
       <Image
         src="/images/floor2.jpg" // ← Make sure to place your image in /public folder with this name
@@ -28,11 +28,11 @@ export default function HeroSection() {
               Transform your space with our professional cleaning services –
               simple, quick, and reliable.🌿
             </div>
-            <div className="xl:text-[20px] md:hidden block font-nunito font-light tracking-wide">
+            {/* <div className="xl:text-[20px] md:hidden block font-nunito font-light tracking-wide">
               Our expert cleaning services ensure your home or office is
               spotless, sanitized, and sparkling with every visit. Trusted by
               families and businesses alike.
-            </div>
+            </div> */}
           </div>
 
           {/* Call to Action */}
@@ -70,7 +70,7 @@ export default function HeroSection() {
                   width={1120}
                   height={1120}
                   priority
-                  className="h-auto w-full object-cover"
+                  className="w-[400px] h-[200px] object-cover"
                 />
               </div>
             </div>
