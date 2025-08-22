@@ -1,12 +1,13 @@
 import Image from "next/image";
 import GradientOverlay from "../gradient/GradientOverlay";
+import PinkGradientOverlay from "../gradient/PinkGradientOverlay";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen bg-white dark:bg-[#0b0f12] w-full">
+    <section className="relative h-[80vh] md:h-screen bg-white dark:bg-[#0b0f12] w-full">
       {/* Background Image */}
       <Image
-        src="/images/heromob.jpg" // ← Make sure to place your image in /public folder with this name
+        src="/images/floor2.jpg" // ← Make sure to place your image in /public folder with this name
         alt="Commercial Cleaning"
         fill
         className="object-cover hidden object-center"
@@ -16,7 +17,7 @@ export default function HeroSection() {
       {/* Overlay Content */}
       <div className="absolute inset-0 px-6 pt-20 lg:px-10 xl:px-20  z-50 flex lg:pt-48 xl:pt-44 md:pt-36 flex-col md:flex-row justify-center   md:justify-center  text-[#243056] dark:text-gray-100">
         <div className="w-full md:w-1/2 mb-4">
-          <div className=" z-50 md:mt-28 space-y-4  ">
+          <div className=" z-50 md:mt-28 space-y-0 md:space-y-4  ">
             <div className="text-[40px] mb-0 md:text-[50px] font-poppins lg:text-[40px] xl:text-[72px]  font-semibold leading-tight ">
               Clean Space Facilities
             </div>
@@ -26,6 +27,11 @@ export default function HeroSection() {
             <div className="xl:text-[20px] mt-2 font-nunito font-light tracking-wide">
               Transform your space with our professional cleaning services –
               simple, quick, and reliable.🌿
+            </div>
+            <div className="xl:text-[20px] md:hidden block font-nunito font-light tracking-wide">
+              Our expert cleaning services ensure your home or office is
+              spotless, sanitized, and sparkling with every visit. Trusted by
+              families and businesses alike.
             </div>
           </div>
 
@@ -54,13 +60,21 @@ export default function HeroSection() {
         </div>
 
         <div className=" block md:hidden">
-          <Image
-            src="/images/glassClean.jpeg"
-            alt="Image"
-            width={400}
-            height={400}
-            className="h-[400px] object-cover"
-          />
+          {/* Left: circular photo with soft ring & shadow */}
+          <div className=" w-full mt-4 lg:mb-0">
+            <div className="relative rounded-3xl bg-white dark:bg-[#0f1216] p-1 shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:shadow-none">
+              <div className="rounded-3xl border-8 border-[#e7f4f2] dark:border-gray-800 overflow-hidden">
+                <Image
+                  src="/images/floor2.jpg" // put your image in /public/images/
+                  alt="Front exterior of a modern Darwin home"
+                  width={1120}
+                  height={1120}
+                  priority
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="w-full md:w-1/2 relative flex justify-end items-end">
@@ -96,7 +110,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <GradientOverlay className="absolute bottom-0 z-10" />
+      <GradientOverlay className="absolute md:block hidden bottom-0 z-10" />
+      <PinkGradientOverlay className="absolute block md:hidden bottom-0 z-10" />
     </section>
   );
 }

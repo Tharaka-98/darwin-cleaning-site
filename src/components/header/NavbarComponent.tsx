@@ -216,9 +216,12 @@ export default function Header() {
           />
         </Link>
         <div className="md:hidden flex lg:flex gap-2 md:flex-col lg:flex-row">
-        <a href="tel:+1300089845" className="text-pink-700 hover:bg-pink-700 hover:text-white text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl">
-  <IoCall /> 1300 089 845
-</a>
+          <a
+            href="tel:+1300089845"
+            className="text-pink-700 hover:bg-pink-700 hover:text-white text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl"
+          >
+            <IoCall /> 1300 089 845
+          </a>
 
           <div className="text-pink-700 hover:bg-pink-700 hover:text-white  text-[10px] lg:text-[16px]  cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
             <Link href="quote-section" className="">
