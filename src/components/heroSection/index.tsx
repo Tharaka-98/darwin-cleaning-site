@@ -4,7 +4,7 @@ import PinkGradientOverlay from "../gradient/PinkGradientOverlay";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[90vh] md:h-screen bg-white dark:bg-[#0b0f12] w-full">
+    <section className="relative h-screen bg-white dark:bg-[#0b0f12] w-full">
       {/* Background Image */}
       <Image
         src="/images/floor2.jpg" // ← Make sure to place your image in /public folder with this name
