@@ -4,7 +4,7 @@ import PinkGradientOverlay from "../gradient/PinkGradientOverlay";
 
 export default function HeroSection() {
   return (
-    <section className="relative  h-screen bg-white dark:bg-[#0b0f12] w-full">
+    <section className="relative h-[90vh] md:h-screen bg-white dark:bg-[#0b0f12] w-full">
       {/* Background Image */}
       <Image
         src="/images/floor2.jpg" // ← Make sure to place your image in /public folder with this name
@@ -24,15 +24,15 @@ export default function HeroSection() {
             <h2 className="text-[14px] mt-2 md:mt-0 md:text-[20px] lg:text-[20px] xl:text-[24px] font-nunito font-light tracking-wide">
               NOBODY DOES IT BETTER
             </h2>
-            <div className="xl:text-[20px] mt-2 font-nunito font-light tracking-wide">
+            <div className="xl:text-[20px] mt-4 md:mt-2 font-nunito font-light tracking-wide">
               Transform your space with our professional cleaning services –
               simple, quick, and reliable.🌿
             </div>
-            {/* <div className="xl:text-[20px] md:hidden block font-nunito font-light tracking-wide">
+            <div className="xl:text-[20px] md:hidden block font-nunito font-light tracking-wide">
               Our expert cleaning services ensure your home or office is
               spotless, sanitized, and sparkling with every visit. Trusted by
               families and businesses alike.
-            </div> */}
+            </div>
           </div>
 
           {/* Call to Action */}
@@ -61,7 +61,7 @@ export default function HeroSection() {
 
         <div className=" block md:hidden">
           {/* Left: circular photo with soft ring & shadow */}
-          <div className=" w-full mt-4 lg:mb-0">
+          <div className=" w-full mt-8 lg:mb-0">
             <div className="relative rounded-3xl bg-white dark:bg-[#0f1216] p-1 shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:shadow-none">
               <div className="rounded-3xl border-8 border-[#e7f4f2] dark:border-gray-800 overflow-hidden">
                 <Image
