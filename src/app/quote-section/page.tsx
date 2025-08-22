@@ -239,7 +239,7 @@ export default function ContactSection() {
         </div>
       </div>
 
-      <div className="w-full h-64 mt-8 md:mt ">
+      {/* <div className="w-full h-64 mt-8 md:mt ">
         <div className="w-full h-64 mt-8 md:mt ">
           <iframe
             title="Google Map"
@@ -251,7 +251,7 @@ export default function ContactSection() {
             loading="lazy"
           ></iframe>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

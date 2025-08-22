@@ -5,7 +5,7 @@ import React from "react";
 const ParallaxSection: React.FC = () => {
   return (
     <section
-      className="relative h-[60vh] mb-12 md:mb-0 md:h-screen overflow-hidden bg-center bg-cover md:bg-fixed "
+      className="relative h-[60vh] md:mb-0 md:h-screen overflow-hidden bg-center bg-cover md:bg-fixed "
       style={{ backgroundImage: "url('/images/parallax.jpg')" }}
     >
       {/* Wave divider (fills with the next section’s background color) */}
