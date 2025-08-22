@@ -4,7 +4,7 @@ import PinkGradientOverlay from "../gradient/PinkGradientOverlay";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen bg-white dark:bg-[#0b0f12] w-full">
+    <section className="relative h-[90vh] md:h-screen bg-white dark:bg-[#0b0f12] w-full">
       {/* Background Image */}
       <Image
         src="/images/floor2.jpg" // ← Make sure to place your image in /public folder with this name
@@ -15,7 +15,7 @@ export default function HeroSection() {
       />
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 px-6 pt-32 lg:px-10 xl:px-20  z-50 flex lg:pt-48 xl:pt-44 md:pt-36 flex-col md:flex-row justify-center   md:justify-center  text-[#243056] dark:text-gray-100">
+      <div className="absolute inset-0 px-6 pt-20 lg:px-10 xl:px-20  z-50 flex lg:pt-48 xl:pt-44 md:pt-36 flex-col md:flex-row justify-center   md:justify-center  text-[#243056] dark:text-gray-100">
         <div className="w-full md:w-1/2 mb-4">
           <div className=" z-50 md:mt-28 space-y-0 md:space-y-4  ">
             <div className="text-[40px] mb-0 md:text-[50px] font-poppins lg:text-[40px] xl:text-[72px]  font-semibold leading-tight ">
