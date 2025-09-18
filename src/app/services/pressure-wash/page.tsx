@@ -64,7 +64,6 @@ const PressureWashCleaningPage: FC = () => {
           />
         </div>
       </div>
->>>>>>> 8543999a581fe454fb3a3dd2f37144b79b15fa96
     </main>
 
   );
