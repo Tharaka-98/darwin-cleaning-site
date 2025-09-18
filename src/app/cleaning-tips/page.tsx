@@ -181,7 +181,7 @@ const HomeCleaningTipsPage: FC = () => {
             {/* Replace this text block with your logo <Image /> if you have the asset */}
             <div className="text-center">
               <div className="flex justify-center items-center">
-              <GiMagicBroom className="xl:w-24 xl:h-24 lg:w-20 lg:h-20 md:w-12 w-10 md:h-12 h-10 text-[#243056] dark:text-gray-100" />
+                <GiMagicBroom className="xl:w-24 xl:h-24 lg:w-20 lg:h-20 md:w-12 w-10 md:h-12 h-10 text-[#243056] dark:text-gray-100" />
               </div>
               <p className="mt-3 text-2xl font-poppins font-medium text-[#243056] dark:text-gray-100 tracking-wide">
                 Cleaning Space
@@ -196,7 +196,7 @@ const HomeCleaningTipsPage: FC = () => {
 
           <div className="flex justify-center">
             <div className="text-center">
-            <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center">
                 <Link href="/">
                   <Image
                     src="/images/logo.png"
