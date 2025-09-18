@@ -1,6 +1,4 @@
 // app/services/index.tsx (or pages/services.tsx depending on your setup)
-"use client";
-
 import { FC } from "react";
 import type { Metadata } from "next";
 import { companyInfo } from "@/lib/seo";

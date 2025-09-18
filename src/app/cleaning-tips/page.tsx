@@ -1,6 +1,4 @@
 // app/cleaning-tips/page.tsx  (or: components/HomeCleaningTipsPage.tsx)
-"use client";
-
 import { FC } from "react";
 import type { Metadata } from "next";
 import { companyInfo } from "@/lib/seo";

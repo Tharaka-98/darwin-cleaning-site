@@ -1,5 +1,3 @@
-"use client";
-
 import { FC } from "react";
 import type { Metadata } from "next";
 import { companyInfo } from "@/lib/seo";
