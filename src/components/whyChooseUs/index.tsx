@@ -52,7 +52,7 @@ export default function WhyChooseUsComponent() {
           Why Choose Us
         </div>
         <p className="text-gray-600 dark:text-gray-300 font-ubuntu text-[14px] mt-2 md:mt-4 xl:mt-6 md:text-[18px] lg:text-[22px] mb-12">
-          Taylor Made Cleaning Company is proud to have achieved the Certificate
+          Clean Space Facilities Cleaning Company is proud to have achieved the Certificate
           of Prequalification in OHS/WHS with Cm3.
         </p>
       </div>
