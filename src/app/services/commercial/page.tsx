@@ -1,6 +1,18 @@
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Commercial Cleaning",
+  description:
+    "Office, retail, government and industrial cleaning services across Darwin and NT.",
+  alternates: { canonical: "/services/commercial" },
+  openGraph: {
+    title: `Commercial Cleaning | ${companyInfo.name}`,
+    description: "Reliable commercial cleaning for offices, retail and more.",
+    url: "/services/commercial",
+  },
+};
 import { FaCheck } from "react-icons/fa"; // Import the tick icon
 import Image from "next/image"; // Import Image component for the image on the right
 
@@ -15,7 +27,7 @@ const CommercialCleaningPage: FC = () => {
     "Banks & Financial Institutions",
     "Education Institutions",
     "Warehouse Cleaning",
-    "Shipping Ports & Airports"
+    "Shipping Ports & Airports",
   ];
 
   return (

@@ -1,7 +1,19 @@
-"use client";
-
 import { FC } from "react";
-import { FaCheck } from "react-icons/fa";  // Import the tick icon
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Pressure Wash Cleaning",
+  description:
+    "High-pressure cleaning for driveways, patios, roofs and exteriors in Darwin.",
+  alternates: { canonical: "/services/pressure-wash" },
+  openGraph: {
+    title: `Pressure Wash Cleaning | ${companyInfo.name}`,
+    description: "Powerful exterior cleaning for homes and businesses.",
+    url: "/services/pressure-wash",
+  },
+};
+import { FaCheck } from "react-icons/fa"; // Import the tick icon
 import Image from "next/image";
 
 const PressureWashCleaningPage: FC = () => {
@@ -11,12 +23,11 @@ const PressureWashCleaningPage: FC = () => {
     "Patio & Deck Cleaning",
     "Sidewalk Cleaning",
     "Roof & Gutter Washing",
-    "Exterior Wall Cleaning"
+    "Exterior Wall Cleaning",
   ];
 
   return (
-
-      <main className="px-6 bg-white dark:bg-[#0b0f12] lg:px-12 py-10 md:mt-20 mt-20 lg:mt-68 xl:mt-64">
+    <main className="px-6 bg-white dark:bg-[#0b0f12] lg:px-12 py-10 md:mt-20 mt-20 lg:mt-68 xl:mt-64">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Side Content */}
         <div className="flex-1">

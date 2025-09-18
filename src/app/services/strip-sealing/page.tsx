@@ -1,6 +1,19 @@
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Strip & Sealing",
+  description:
+    "Floor strip and seal, polishing, waxing and restoration services in Darwin.",
+  alternates: { canonical: "/services/strip-sealing" },
+  openGraph: {
+    title: `Strip & Sealing | ${companyInfo.name}`,
+    description:
+      "Restore and protect floors with professional strip and sealing.",
+    url: "/services/strip-sealing",
+  },
+};
 import { FaCheck } from "react-icons/fa"; // Import the tick icon
 import Image from "next/image"; // Import Image component for the image on the right
 
@@ -11,7 +24,7 @@ const StripSealingPage: FC = () => {
     "Polishing and Buffing",
     "Waxing and Restoration",
     "Tile and Grout Stripping",
-    "Concrete and Epoxy Sealing"
+    "Concrete and Epoxy Sealing",
   ];
 
   return (

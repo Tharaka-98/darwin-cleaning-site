@@ -1,6 +1,18 @@
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Tile & Grout Cleaning",
+  description:
+    "Tile and grout cleaning, sealing and polishing for homes and businesses in Darwin.",
+  alternates: { canonical: "/services/tile-grout" },
+  openGraph: {
+    title: `Tile & Grout Cleaning | ${companyInfo.name}`,
+    description: "Restore shine to tiles with professional grout cleaning.",
+    url: "/services/tile-grout",
+  },
+};
 import { FaCheck } from "react-icons/fa6";
 import Image from "next/image";
 
@@ -13,7 +25,7 @@ const TileGroutCleaningPage: FC = () => {
     "Polishing Tiles",
     "Bedding displays",
     "Kitchen & Bathroom Tile Cleaning",
-    "Stain & Floortext-[#243056] dark:text-gray-100 Removal",
+    "Stain & Floor Removal",
   ];
   return (
     <main className="px-6 bg-white dark:bg-[#0b0f12] lg:px-12 py-10 md:mt-20 mt-20 lg:mt-68 xl:mt-64">

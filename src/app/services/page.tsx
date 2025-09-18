@@ -1,7 +1,19 @@
 // app/services/index.tsx (or pages/services.tsx depending on your setup)
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description:
+    "Explore our full range of residential and commercial cleaning services in Darwin.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: `Our Services | ${companyInfo.name}`,
+    description: "Residential, commercial and specialty cleaning services.",
+    url: "/services",
+  },
+};
 import Link from "next/link";
 
 const MAIN_MENU = [

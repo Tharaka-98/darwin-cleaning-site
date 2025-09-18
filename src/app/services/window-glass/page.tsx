@@ -1,6 +1,18 @@
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Window & Glass Cleaning",
+  description:
+    "Streak-free interior and exterior window cleaning, tracks, frames and more in Darwin.",
+  alternates: { canonical: "/services/window-glass" },
+  openGraph: {
+    title: `Window & Glass Cleaning | ${companyInfo.name}`,
+    description: "Professional window cleaning for homes and businesses.",
+    url: "/services/window-glass",
+  },
+};
 import { FaCheck } from "react-icons/fa"; // Import the tick icon
 import Image from "next/image"; // Import Image component for the image on the right
 
@@ -12,7 +24,7 @@ const WindowGlassCleaningPage: FC = () => {
     "Flyscreens",
     "High/Hard-to-Reach (Pole)",
     "Glass Balustrades",
-    "Mirror Polishing"
+    "Mirror Polishing",
   ];
 
   return (

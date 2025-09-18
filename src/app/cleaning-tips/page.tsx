@@ -1,7 +1,19 @@
 // app/cleaning-tips/page.tsx  (or: components/HomeCleaningTipsPage.tsx)
-"use client";
-
 import { FC } from "react";
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Cleaning Tips",
+  description:
+    "Expert home cleaning tips and checklists from the professionals at Clean Space.",
+  alternates: { canonical: "/cleaning-tips" },
+  openGraph: {
+    title: `Cleaning Tips | ${companyInfo.name}`,
+    description: "Expert cleaning advice to keep your home spotless.",
+    url: "/cleaning-tips",
+  },
+};
 import { PiCheckCircleBold } from "react-icons/pi";
 import { FiCalendar } from "react-icons/fi";
 import Link from "next/link";

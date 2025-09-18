@@ -11,6 +11,13 @@ import "./globals.css";
 import Header from "@/components/header/NavbarComponent";
 import Footer from "@/components/footer/FooterComponent";
 import ThemeToggle from "@/components/theme/ThemeToggle";
+import {
+  companyInfo,
+  siteUrl,
+  defaultOpenGraphImage,
+  buildLocalBusinessJsonLd,
+  buildOrganizationJsonLd,
+} from "@/lib/seo";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -39,22 +46,65 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Clean Space",
-  description: "Professional services tailored for you",
-  keywords: "cleaning, professional services, home cleaning, office cleaning",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${companyInfo.name}`,
+    template: `%s | ${companyInfo.name}`,
+  },
+  description:
+    "Professional residential, commercial and specialty cleaning services in Darwin and NT.",
+  keywords: [
+    "cleaning",
+    "home cleaning",
+    "office cleaning",
+    "commercial cleaning",
+    "Darwin",
+    "Northern Territory",
+  ],
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
-    title: "Clean Space - Home Cleaning Services",
-    description: "Expert cleaning services tailored to your needs.",
-    url: "https://cleanspacesfacilities.com.au", // replace with your actual URL
     type: "website",
-    // image: "https://yourdomain.com/og-image.jpg", // replace with your image path
+    url: siteUrl,
+    title: `${companyInfo.name} - Professional Cleaning Services in Darwin`,
+    description:
+      "Expert cleaning services tailored to your needs across Darwin and NT.",
+    siteName: companyInfo.name,
+    images: [
+      {
+        url: defaultOpenGraphImage,
+        width: 1200,
+        height: 630,
+        alt: `${companyInfo.name} - Cleaning Services`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clean Space",
-    description: "Professional services tailored for you",
-    // image: "https://yourdomain.com/twitter-image.jpg", // replace with your image path
+    title: companyInfo.name,
+    description:
+      "Professional residential, commercial and specialty cleaning services in Darwin and NT.",
+    images: [defaultOpenGraphImage],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+  category: "home",
+  applicationName: companyInfo.name,
+  creator: companyInfo.name,
+  publisher: companyInfo.name,
 };
 
 export default function RootLayout({
@@ -69,6 +119,18 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
         <meta name="robots" content="index, follow" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildOrganizationJsonLd()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildLocalBusinessJsonLd()),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} ${ausiNSW.variable} ${nunitoSans.variable} ${poppins.variable} antialiased`}

@@ -40,7 +40,6 @@
   --font-nunito: var(--font-nunito-sans);
   --font-poppins: var(--font-poppins);
   --font-ubuntu: var(--font-ubuntu);
-  --font-nws: var(--font-paywrite-au);
 }
 
 @media (prefers-color-scheme: dark) {
