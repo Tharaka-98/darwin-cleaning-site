@@ -32,13 +32,15 @@ const PressureWashCleaningPage: FC = () => {
         {/* Left Side Content */}
         <div className="flex-1">
           <h1 className="text-3xl font-semibold text-[#243056] dark:text-gray-100 font-poppins mb-6">
-          Pressure Wash Cleaning
+            Pressure Wash Cleaning
           </h1>
           <p className="xl:text-lg font-nunito text-[#243056] dark:text-gray-100 mb-2 xl:mb-4">
-          Our pressure washing service provides a powerful clean for outdoor areas like driveways, patios, and decks.
+            Our pressure washing service provides a powerful clean for outdoor
+            areas like driveways, patios, and decks.
           </p>
           <p className="xl:text-lg font-nunito mb-4 text-[#243056] dark:text-gray-100">
-          We use state-of-the-art equipment to remove dirt, mold, and grime, leaving your exteriors looking new again.
+            We use state-of-the-art equipment to remove dirt, mold, and grime,
+            leaving your exteriors looking new again.
           </p>
           <h3 className="text-xl font-semibold font-poppins text-[#243056] dark:text-gray-100 mb-4">
             Services Available:
@@ -47,7 +49,9 @@ const PressureWashCleaningPage: FC = () => {
             {availableServices.map((service, index) => (
               <li key={index} className="flex items-center gap-2">
                 <FaCheck className="text-[#00ffbb]" /> {/* Tick icon */}
-                <span className="text-[#243056] dark:text-gray-100 font-nunito">{service}</span>
+                <span className="text-[#243056] dark:text-gray-100 font-nunito">
+                  {service}
+                </span>
               </li>
             ))}
           </ul>
@@ -65,7 +69,6 @@ const PressureWashCleaningPage: FC = () => {
         </div>
       </div>
     </main>
-
   );
 };
 
