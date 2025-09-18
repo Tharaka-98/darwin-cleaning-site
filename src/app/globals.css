@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted: #f5f5f5;
+  --card: #ffffff;
+  --card-foreground: #171717;
 }
 
 /* Container to control the overflow and animation */
@@ -16,7 +19,7 @@
 .scrolling-text {
   display: inline-block;
   white-space: nowrap; /* Prevent wrapping of text */
-  animation: scroll-left 20s linear infinite; /* Animation definition */
+  animation: scroll-left 30s linear infinite; /* Animation definition */
 }
 
 /* Keyframes for the scroll animation */
@@ -28,7 +31,6 @@
     transform: translateX(-100%); /* End offscreen on the left */
   }
 }
-
 
 @theme inline {
   --color-background: var(--background);
@@ -44,11 +46,40 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --muted: #0f0f10;
+    --card: #0f0f10;
+    --card-foreground: #e5e7eb;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+}
+
+/* Explicit dark class to allow manual toggle overriding system */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #0f0f10;
+  --card: #0f0f10;
+  --card-foreground: #e5e7eb;
+}
+
+/* Utilities to bridge Tailwind classes we use inline */
+.bg-app {
+  background-color: var(--background);
+}
+.text-app {
+  color: var(--foreground);
+}
+.bg-card {
+  background-color: var(--card);
+}
+.text-card {
+  color: var(--card-foreground);
+}
+.bg-muted {
+  background-color: var(--muted);
 }

@@ -5,12 +5,12 @@ import React from "react";
 const ParallaxSection: React.FC = () => {
   return (
     <section
-      className="relative h-[60vh] mb-12 md:mb-0 md:h-screen overflow-hidden bg-center bg-cover md:bg-fixed "
+      className="relative h-[60vh] md:mb-0 md:h-screen overflow-hidden bg-center bg-cover md:bg-fixed "
       style={{ backgroundImage: "url('/images/parallax.jpg')" }}
     >
       {/* Wave divider (fills with the next section’s background color) */}
       <svg
-        className="absolute top-0 z-10 left-0 w-full hidden md:block  h-[90px] md:h-[80px] text-[#eff8fa] pointer-events-none"
+        className="absolute top-0 z-10 left-0 w-full hidden md:block  h-[90px] md:h-[80px] text-[#eff8fa] dark:text-[#000000]  pointer-events-none"
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         aria-hidden="true"
@@ -22,7 +22,7 @@ const ParallaxSection: React.FC = () => {
         />
       </svg>
       <svg
-        className="absolute top-0 z-10 left-0 w-full md:hidden block h-[90px] md:h-[80px] text-[#eff8fa] pointer-events-none"
+        className="absolute top-0 z-10 left-0 w-full md:hidden block h-[90px] md:h-[80px] text-[#eff8fa] dark:text-[#000000] pointer-events-none"
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         aria-hidden="true"
@@ -46,7 +46,7 @@ const ParallaxSection: React.FC = () => {
 
       {/* Wave divider (fills with the next section’s background color) */}
       <svg
-        className="absolute hidden md:block bottom-[-3px] left-0 w-full rotate-180 h-[90px] md:h-[90px] text-white pointer-events-none"
+        className="absolute hidden md:block bottom-[-3px] left-0 w-full rotate-180 h-[90px] md:h-[90px] text-[#eff8fa] dark:text-[#0b0f12] pointer-events-none"
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         aria-hidden="true"
@@ -58,7 +58,7 @@ const ParallaxSection: React.FC = () => {
         />
       </svg>
       <svg
-        className="absolute bottom-[-3px] rotate-180 z-10 left-0 w-full md:hidden block h-[90px] md:h-[80px] text-[#eff8fa] pointer-events-none"
+        className="absolute bottom-[-3px] rotate-180 z-10 left-0 w-full md:hidden block h-[90px] md:h-[80px] text-[#eff8fa] dark:text-[#0b0f12] pointer-events-none"
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         aria-hidden="true"

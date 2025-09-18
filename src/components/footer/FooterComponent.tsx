@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { BsTiktok } from "react-icons/bs";
 
 const services = [
   {
@@ -40,16 +41,19 @@ const footerSections: Array<{
     links: [
       { label: "Get a free quote", href: "/quote-section", underline: true },
       { label: "📞 (08) 8297 5210" },
-      { label: "📧 admin@southernxcleaning.com.au" },
-      { label: "📍 14-18 Rosslyn Street, Mile End South SA 5031" },
+      {
+        label: "📧 info@cleanspacesfacilities.com.au",
+        href: "mailto:info@cleanspacesfacilities.com.au",
+      },
+      { label: "📍 1/4, Damaso Place, Woolner, 0820, NT" },
     ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2b2b2b] text-white text-sm">
-      <div className="mx-auto px-6 lg:px-12 py-10 border-t border-white flex flex-col md:flex-row justify-between items-start gap-16">
+    <footer className="bg-[#050505] dark:bg-[#0b0f12] text-white text-sm">
+      <div className="mx-auto px-6 lg:px-12 py-10 border-t border-white/60 dark:border-white/10 flex flex-col md:flex-row justify-between items-start gap-16">
         {/* Left:- Logo + Description + Socials */}
         <div className="md:space-y-4 md:w-1/3">
           <Link
@@ -65,20 +69,28 @@ export default function Footer() {
             />
           </Link>
           <div className="text-gray-400 text-[12px] md:text-[16px] text-center md:text-left font-poppins">
-          Fresh Spaces, Happy Faces – Schedule Your Cleaning Today. <br/> A Cleaner Home Starts Here – Book Now.
+            Fresh Spaces, Happy Faces – Schedule Your Cleaning Today. <br /> A
+            Cleaner Home Starts Here – Book Now.
           </div>
           <div className="flex justify-center md:justify-start space-x-4 pt-2">
-            <Link href="#" className="hover:text-blue-500">
-              <Facebook size={18} />
-            </Link>
-            <Link href="#" className="hover:text-pink-400">
+          <Link href="https://www.facebook.com/profile.php?id=61579877900066" target="_blank" className="hover:text-blue-500">
+  <Facebook size={18} />
+</Link>
+
+            <Link href="#" className="hover:text-pink-400" target="_blank">
               <Instagram size={18} />
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="#" className="hover:text-blue-700" target="_blank">
               <X size={18} />
             </Link>
-            <Link href="#" className="hover:text-blue-400">
+            <Link href="#" className="hover:text-blue-400" target="_blank">
               <Linkedin size={18} />
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@cleanspacefacilities"
+              className="hover:text-blue-400" target="_blank"
+            >
+              <BsTiktok size={18} />
             </Link>
           </div>
         </div>
@@ -111,7 +123,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-700 font-poppins text-center text-gray-500 py-4 text-xs">
+      <div className="border-t dark:border-gray-700/60  font-poppins text-center text-white dark:text-gray-500 py-4 text-xs">
         © 2025 Clean Space. All rights reserved.
       </div>
     </footer>

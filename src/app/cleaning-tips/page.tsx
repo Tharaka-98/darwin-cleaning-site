@@ -17,6 +17,8 @@ export const metadata: Metadata = {
 import { PiCheckCircleBold } from "react-icons/pi";
 import { FiCalendar } from "react-icons/fi";
 import Link from "next/link";
+import Image from "next/image";
+import { GiMagicBroom } from "react-icons/gi";
 
 const primary = {
   navy: "text-[#0A2058]",
@@ -49,11 +51,11 @@ const proSteps = [
 
 const HomeCleaningTipsPage: FC = () => {
   return (
-    <main className="min-h-screen lg:px-6 pt-20 md:pt-16 lg:pt-64  bg-[#FFF6FA]">
+    <main className="min-h-screen lg:px-6 pt-20 md:pt-16 lg:pt-64  bg-[#FFF6FA] dark:bg-[#0b0f12]">
       {/* Header */}
       <section className="mx-auto w-full lg: xl:max-w-7xl px-6 pt-10 pb-4 sm:pt-14">
         <h1
-          className={`font-extrabold tracking-tight ${primary.navy} text-[20px] lg:text-4xl xl:text-5xl`}
+          className={`font-extrabold text-[#243056] dark:text-gray-100 tracking-tight ${primary.navy} text-[20px] lg:text-4xl xl:text-5xl`}
         >
           Home Cleaning Tips
         </h1>
@@ -62,10 +64,10 @@ const HomeCleaningTipsPage: FC = () => {
 
       {/* Framed checklist block */}
       <section className="mx-auto w-full lg: xl:max-w-7xl px-6 pb-10">
-        <div className="rounded border border-black/80 bg-white">
+        <div className="rounded border border-black/80 dark:border-gray-800 bg-white dark:bg-[#0f1216]">
           <div className="p-6 sm:p-10">
             <h2
-              className={` text-[18px] md:text-[20px] lg:text-2xl xl:text-3xl font-poppins font-semibold ${primary.navy}`}
+              className={` text-[18px] text-[#243056] dark:text-gray-100 md:text-[20px] lg:text-2xl xl:text-3xl font-poppins font-semibold ${primary.navy}`}
             >
               Cleaning Space offers expert cleaning tips for a spotless home.
             </h2>
@@ -74,7 +76,7 @@ const HomeCleaningTipsPage: FC = () => {
               {checklist.map((item) => (
                 <li
                   key={item}
-                  className="flex justify-start items-center text-[14px] font-nunito md:text-[16px] gap-3"
+                  className="flex justify-start text-[#243056] dark:text-gray-100 items-center text-[14px] font-nunito md:text-[16px] gap-3"
                 >
                   <span className="mt-0.5 font-poppins rounded-full">
                     <PiCheckCircleBold
@@ -93,12 +95,12 @@ const HomeCleaningTipsPage: FC = () => {
       {/* Copy + steps (screenshots 2) */}
       <section className="mx-auto w-full lg: xl:max-w-7xl px-6 pb-12">
         <h3
-          className={`text-[18px] md:text-[20px] lg:text-2xl xl:text-3xl font-poppins font-semibold ${primary.navy}`}
+          className={`text-[18px] md:text-[20px] text-[#243056] dark:text-gray-100 lg:text-2xl xl:text-3xl font-poppins font-semibold ${primary.navy} dark:text-white`}
         >
           Expert Cleaning Tips from the Home Cleaning Professionals
         </h3>
 
-        <p className="mt-4 text-[15px] md:text-[17px] md:leading-7 font-nunito text-justify   text-[#2b3f7b]">
+        <p className="mt-4 text-[15px] text-[#243056] dark:text-gray-100 md:text-[17px] md:leading-7 font-nunito text-justify   ">
           With decades of experience in the residential cleaning business, our
           home cleaning professionals have pretty much seen it all. No stain is
           too stubborn, no streak too enduring. Our maids not only have modern
@@ -109,11 +111,11 @@ const HomeCleaningTipsPage: FC = () => {
         </p>
 
         <h4
-          className={`mt-8 text-[18px] md:text-[20px] lg:text-2xl xl:text-3xl font-poppins font-semibold ${primary.navy}`}
+          className={`mt-8 text-[18px] text-[#243056] dark:text-gray-100 md:text-[20px] lg:text-2xl xl:text-3xl font-poppins font-semibold ${primary.navy}`}
         >
           How to Clean a House Professionally
         </h4>
-        <p className="mt-3 text-[15px] md:text-[17px] md:leading-7 font-nunito text-justify text-[#2b3f7b]">
+        <p className="mt-3 text-[#243056] dark:text-gray-100 text-[15px] md:text-[17px] md:leading-7 font-nunito text-justify ">
           We know how good it feels to come home to a clean house. We want you
           to experience that feeling every day. We’ve organized our home
           cleaning tips by room (because we’re really into organizing things).
@@ -121,7 +123,7 @@ const HomeCleaningTipsPage: FC = () => {
           cleaning blog.
         </p>
 
-        <p className="mt-6 text-[15px] md:text-[17px] md:leading-7 font-nunito text-[#2b3f7b]">
+        <p className="mt-6 text-[15px]  md:text-[17px] md:leading-7 font-nunito text-[#2b3f7b] dark:text-gray-300">
           To keep your house sparkling, follow these three simple steps:
         </p>
 
@@ -133,10 +135,10 @@ const HomeCleaningTipsPage: FC = () => {
                 aria-hidden
               />
               <div>
-                <p className="font-semibold text-[#102452]">
+                <p className="font-semibold text-[#102452] dark:text-white">
                   <span className="font-medium font-poppins">{title}</span>
                 </p>
-                <p className="mt-1 text-justify text-[15px] md:text-[17px] md:leading-7 font-nunito text-[#2b3f7b]">
+                <p className="mt-1 text-justify text-[15px] md:text-[17px] md:leading-7 font-nunito text-[#2b3f7b] dark:text-gray-300">
                   {body}
                 </p>
               </div>
@@ -148,7 +150,7 @@ const HomeCleaningTipsPage: FC = () => {
       {/* CTA Banner (screenshot 3) */}
       <section className="mx-auto w-full  xl:max-w-7xl px-6 pb-12">
         <div
-          className={`relative rounded-2xl ${primary.magenta} text-white px-6 py-4 md:py-10 sm:px-6 xl:py-14`}
+          className={`relative rounded-2xl ${primary.magenta} text-[#243056] dark:text-gray-100 px-6 py-4 md:py-10 sm:px-6 xl:py-14`}
         >
           <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -178,8 +180,10 @@ const HomeCleaningTipsPage: FC = () => {
           <div className="flex justify-center">
             {/* Replace this text block with your logo <Image /> if you have the asset */}
             <div className="text-center">
-              <div className="mx-auto h-14 w-14 rounded-full bg-[#F8D8EA]" />
-              <p className="mt-3 text-2xl font-poppins font-medium text-[#0b2259] tracking-wide">
+              <div className="flex justify-center items-center">
+              <GiMagicBroom className="xl:w-24 xl:h-24 lg:w-20 lg:h-20 md:w-12 w-10 md:h-12 h-10 text-[#243056] dark:text-gray-100" />
+              </div>
+              <p className="mt-3 text-2xl font-poppins font-medium text-[#243056] dark:text-gray-100 tracking-wide">
                 Cleaning Space
               </p>
               <p className="text-sm font-nunito text-[#ff5a8d]">
@@ -192,18 +196,28 @@ const HomeCleaningTipsPage: FC = () => {
 
           <div className="flex justify-center">
             <div className="text-center">
-              <div className="mx-auto h-14 w-24 rounded bg-[#EAF0FF]" />
-              <p className="mt-3 text-2xl font-poppins font-medium text-[#163b8f] tracking-wide">
+            <div className="flex justify-center items-center">
+                <Link href="/">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Logo"
+                    width={100}
+                    height={50}
+                    className="h-24 w-16 lg:h-36 lg:w-24"
+                  />
+                </Link>
+              </div>
+              <p className="mt-3 text-2xl font-poppins font-medium text-[#243056] dark:text-gray-100 tracking-wide">
                 neighborly
               </p>
-              <p className="text-sm text-[#2b3f7b] font-nunito">
+              <p className="text-sm text-[#243056] dark:text-gray-100 font-nunito">
                 your hub for home services™
               </p>
             </div>
           </div>
         </div>
 
-        <p className="mx-auto mt-8 font-nunito max-w-4xl text-center text-[17px] leading-7 text-[#2b3f7b]">
+        <p className="mx-auto mt-8 font-nunito max-w-4xl text-center text-[17px] leading-7 text-[#243056] dark:text-gray-100">
           Cleaning Space is part of the Neighborly family of home service
           providers. Searching through dozens of home service providers is a
           thing of the past. Rely on Neighborly’s national network of trusted,
