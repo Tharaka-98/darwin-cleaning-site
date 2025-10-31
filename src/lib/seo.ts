@@ -2,7 +2,7 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://cleanspacesfacilities.com.au";
 
 export const companyInfo = {
-  name: "Clean Space",
+  name: "Clean Space Facilities",
   url: siteUrl,
   phone: "1300 089 845",
   logo: "/images/logo.png",
