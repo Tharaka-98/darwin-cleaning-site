@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Testimonial {
   name: string;
@@ -89,7 +90,7 @@ const TestimonialComponent: React.FC = () => {
       <div className="text-[28px] text-[#243056] dark:text-gray-100  mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold">
         {" "}
         Hear From Our Clients{" "}
-        <div className="font-ubuntu text-[16px]  font-normal md:text-[18px] lg:text-[22px] md:mb-12 text-pink-600">
+        <div className="font-ubuntu text-[16px]  font-normal md:text-[18px] lg:text-[22px] md:mb-12 text-[#1ca79b]">
           Real Reviews, Real Trust
         </div>
       </div>{" "}
@@ -103,7 +104,7 @@ const TestimonialComponent: React.FC = () => {
             className="text-gray-500 hover:text-gray-700"
           >
             {" "}
-            <FaArrowLeft className="w-8 h-8 text-pink-700 cursor-pointer " />{" "}
+            <ChevronLeft className="w-8 h-8 text-[#1ca79b] cursor-pointer " />{" "}
           </button>{" "}
           {/* Display 3 testimonials at a time */}{" "}
           <div className="flex space-x-6">
@@ -111,12 +112,12 @@ const TestimonialComponent: React.FC = () => {
             {currentTestimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#12161a] p-6 border-pink-700 border rounded-3xl shadow-lg dark:shadow-none flex flex-col items-center max-w-xs"
+                className="bg-white dark:bg-[#12161a] p-6 border-[#1ca79b] border rounded-3xl shadow-lg dark:shadow-none flex flex-col items-center max-w-xs"
               >
                 {" "}
                 <div className="flex items-center mb-4">
                   {" "}
-                  <div className="rounded-full bg-pink-500 p-2">
+                  <div className="rounded-full bg-[#1ca79b] p-2">
                     {" "}
                     <FaStar className="w-6 h-6 text-white" />{" "}
                   </div>{" "}
@@ -145,7 +146,7 @@ const TestimonialComponent: React.FC = () => {
             className="text-gray-500 hover:text-gray-700"
           >
             {" "}
-            <FaArrowRight className="w-8 h-8 cursor-pointer text-pink-700" />{" "}
+            <ChevronRight className="w-8 h-8 cursor-pointer text-[#1ca79b]" />{" "}
           </button>{" "}
         </div>{" "}
       </div>{" "}
@@ -156,7 +157,7 @@ const TestimonialComponent: React.FC = () => {
             onClick={handlePrev2}
             className="text-gray-500 hover:text-gray-700"
           >
-            <FaArrowLeft className="w-8 h-8 text-pink-700 cursor-pointer" />
+            <ChevronLeft className="w-8 h-8 text-[#1ca79b] cursor-pointer" />
           </button>
 
           {/* Display testimonials based on screen size */}
@@ -165,10 +166,10 @@ const TestimonialComponent: React.FC = () => {
 
             <div
               key={currentIndex}
-              className="border-pink-700 border p-6 rounded-lg shadow-lg/30 dark:bg-[#12161a] dark:shadow-none flex flex-col items-center "
+              className="border-[#1ca79b] border p-6 rounded-lg shadow-lg/30 dark:bg-[#12161a] dark:shadow-none flex flex-col items-center "
             >
               <div className="flex items-center mb-4">
-                <div className="rounded-full bg-pink-500 p-2">
+                <div className="rounded-full bg-[#1ca79b] p-2">
                   <FaStar className="w-6 h-6 text-white" />
                 </div>
                 <p className="ml-3 text-lg font-medium text-gray-800 dark:text-gray-100">
@@ -193,7 +194,7 @@ const TestimonialComponent: React.FC = () => {
             onClick={handleNext2}
             className="text-gray-500 hover:text-gray-700"
           >
-            <FaArrowRight className="w-8 h-8 cursor-pointer text-pink-700" />
+            <ChevronRight className="w-8 h-8 cursor-pointer text-[#1ca79b]" />
           </button>
         </div>
       </div>
