@@ -6,7 +6,7 @@ import { MapPin } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[90vh] md:h-screen bg-white dark:bg-[#0b0f12] w-full">
+    <section className="relative md:h-screen h-[100vh] bg-white dark:bg-[#0b0f12] w-full">
       {/* Background Image */}
       <Image
         src="/images/floor2.jpg" // ← Make sure to place your image in /public folder with this name

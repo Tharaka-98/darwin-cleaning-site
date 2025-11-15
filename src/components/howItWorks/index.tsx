@@ -18,7 +18,7 @@ export default function HowItWorksComponent() {
         "Fill out our quick online form or give us a call to discuss your cleaning needs. Our friendly team will help you choose the perfect service package tailored to your space and requirements.",
       gradient: "from-[#1ca79b] to-[#159086]",
       bgGradient: "from-[#1ca79b]/20 to-[#159086]/10",
-      borderColor: "border-[#1ca79b]",
+      borderColor: "border-[#1ca79b]", 
     },
     {
       icon: Users,
@@ -41,7 +41,7 @@ export default function HowItWorksComponent() {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-10 lg:px-20 bg-gradient-to-b from-white to-[#f0f9f8] dark:from-[#0b0f12] dark:to-[#0a1418]">
+    <section className="py-10 px-6 md:px-10 lg:px-20 bg-gradient-to-b from-white to-[#f0f9f8] dark:from-[#0b0f12] dark:to-[#0a1418]">
       <div className="max-w-7xl mx-auto">
         {/* Subheading + Heading */}
         <div className="text-center mb-16 md:mb-20">
@@ -54,7 +54,7 @@ export default function HowItWorksComponent() {
         </div>
 
         {/* Steps with Icons */}
-        <div className="relative">
+        <div className="relative ">
           {/* Connecting Arrow Lines - Desktop */}
           <div className="hidden md:block absolute top-16 left-1/4 right-1/4 h-0.5">
             <div className="absolute left-0 right-0 top-0 h-0.5 bg-gradient-to-r from-[#1ca79b] via-[#44a087] to-[#1ca79b] opacity-30" />
@@ -63,7 +63,7 @@ export default function HowItWorksComponent() {
             </div>
           </div>
 
-          <div className="space-y-12 md:space-y-0 md:grid md:grid-cols-3 md:gap-8 lg:gap-12 md:items-stretch">
+          <div className="space-y-12  md:space-y-0 md:grid md:grid-cols-3 md:gap-8 lg:gap-12 md:items-stretch">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               return (
