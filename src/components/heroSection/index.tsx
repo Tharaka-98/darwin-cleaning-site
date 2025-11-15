@@ -39,7 +39,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col w-full  md:flex-row md:gap-4">
             {/* Call to Action */}
-            <div className="md:mt-10 z-100 dark:border-gray-700 dark:border rounded-2xl mt-6 md:max-w-[400px] lg:max-w-1/3 shadow-lg overflow-hidden text-black dark:text-gray-100 text-left text-sm font-medium">
+            <div className="md:mt-10 z-100 dark:border-gray-700 dark:border rounded-2xl mt-6 md:max-w-[400px] lg:max-w-[33.333%] shadow-lg overflow-hidden text-black dark:text-gray-100 text-left text-sm font-medium">
               <div className="bg-[#1ca79b] hover:bg-[#159086] px-6 py-2 md:py-4 w-full font-nunito text-white transition">
                 <div className="text-[14px] lg:text-[16px] mb-1">
                   START ONLINE
@@ -54,7 +54,7 @@ export default function HeroSection() {
             </div>
 
             {/* Service Locations */}
-            <div className="mt-6 md:mt-10 relative group md:max-w-2/3">
+            <div className="mt-6 md:mt-10 relative group md:max-w-[66.667%]">
               <div className="relative bg-[#1ca79b] hover:bg-[#159086] rounded-xl px-4 py-3 md:px-6 md:py-4 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-3">
                   <div className="relative">
