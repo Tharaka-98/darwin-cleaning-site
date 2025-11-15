@@ -12,7 +12,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Davis R.",
-    text: "Your cleaning team arrived promptly and started cleaning immediately. They were very friendly and took great care to ensure they did a good job. I'm very impressed with the company so far!...",
+    text: "Your cleaning team arrived promptly and started cleaning immediately. They were very friendly and took great care to ensure they did a good job. I&apos;m very impressed with the company so far!...",
     rating: 5,
   },
   {
@@ -37,12 +37,12 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "John P.",
-    text: "Fantastic experience! The staff were on time and very detailed in their cleaning. I’ll definitely use them again and recommend them to friends.",
+    text: "Fantastic experience! The staff were on time and very detailed in their cleaning. I&apos;ll definitely use them again and recommend them to friends.",
     rating: 5,
   },
   {
     name: "Chris J.",
-    text: "I’m impressed with how thorough the team was. They made sure every corner was spotless. Highly recommend their service!",
+    text: "I&apos;m impressed with how thorough the team was. They made sure every corner was spotless. Highly recommend their service!",
     rating: 5,
   },
 ];
