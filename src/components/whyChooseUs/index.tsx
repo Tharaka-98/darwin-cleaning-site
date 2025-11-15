@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Check, Send, Leaf } from "lucide-react";
+import Image from "next/image";
 
 const features = [
   {
@@ -52,7 +53,13 @@ export default function WhyChooseUsComponent() {
           Why Choose Us
         </div>
         <p className="text-gray-600 dark:text-gray-300 font-ubuntu text-[14px] mt-2 md:mt-4 xl:mt-6 md:text-[18px] text-justify lg:text-[22px] mb-12">
-        At Clean Space Facilities, we bring over 14 years of professional cleaning expertise to every project. Using state-of-the-art equipment and advanced, high-tech cleaning methods, our highly skilled and well-trained team ensures every space is spotless, hygienic, and welcoming. Available 24/7, we deliver consistent, reliable, and exceptional results tailored to your needs, setting the standard for excellence in cleaning services.
+          At Clean Space Facilities, we bring over 14 years of professional
+          cleaning expertise to every project. Using state-of-the-art equipment
+          and advanced, high-tech cleaning methods, our highly skilled and
+          well-trained team ensures every space is spotless, hygienic, and
+          welcoming. Available 24/7, we deliver consistent, reliable, and
+          exceptional results tailored to your needs, setting the standard for
+          excellence in cleaning services.
         </p>
       </div>
 
@@ -74,6 +81,36 @@ export default function WhyChooseUsComponent() {
             </p>
           </div>
         ))}
+      </div>
+
+      {/* Service Locations Map */}
+      <div className="max-w-7xl mx-auto mt-16 md:mt-20">
+        <div className="text-center mb-8">
+          <h3 className="text-[24px] md:text-[32px] lg:text-[40px] font-poppins font-semibold text-[#243056] dark:text-gray-100 mb-3">
+            Our Service Areas
+          </h3>
+          <p className="text-[14px] md:text-[16px] lg:text-[18px] font-nunito text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            We proudly serve customers across multiple states and territories in
+            Australia, delivering professional cleaning services wherever you
+            need us.
+          </p>
+        </div>
+
+        <div className="relative w-full max-w-5xl mx-auto bg-white dark:bg-[#111417] rounded-2xl shadow-xl border border-[#c5f3e7] dark:border-gray-800 overflow-hidden p-4 md:p-6 lg:p-8">
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+            <Image
+              src="/images/aussieMap.png"
+              alt="Australia map showing service areas: Northern Territory, Victoria, Tasmania, and Queensland"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <p className="text-center mt-4 text-[12px] md:text-[14px] font-nunito text-gray-500 dark:text-gray-400 italic">
+            Service locations: Northern Territory, Victoria, Tasmania &
+            Queensland
+          </p>
+        </div>
       </div>
     </section>
   );

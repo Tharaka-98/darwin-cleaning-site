@@ -1,6 +1,8 @@
 import Image from "next/image";
 import GradientOverlay from "../gradient/GradientOverlay";
 import PinkGradientOverlay from "../gradient/PinkGradientOverlay";
+import { companyInfo } from "@/lib/seo";
+import { MapPin } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -35,18 +37,43 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="md:mt-10 z-100 dark:border-gray-700 dark:border rounded-2xl mt-6 md:max-w-[400px] lg:max-w-[300px] shadow-lg overflow-hidden text-black dark:text-gray-100 text-left text-sm font-medium">
-            <div className="bg-[#1ca79b] hover:bg-[#159086] px-6 py-2 md:py-4 w-full font-nunito text-white transition">
-              <div className="text-[14px] lg:text-[16px] mb-1">
-                START ONLINE
+          <div className="flex flex-col w-full  md:flex-row md:gap-4">
+            {/* Call to Action */}
+            <div className="md:mt-10 z-100 dark:border-gray-700 dark:border rounded-2xl mt-6 md:max-w-[400px] lg:max-w-1/3 shadow-lg overflow-hidden text-black dark:text-gray-100 text-left text-sm font-medium">
+              <div className="bg-[#1ca79b] hover:bg-[#159086] px-6 py-2 md:py-4 w-full font-nunito text-white transition">
+                <div className="text-[14px] lg:text-[16px] mb-1">
+                  START ONLINE
+                </div>
+                <a
+                  href="/quote-section"
+                  className="underline text-[14px] lg:text-[16px] cursor-pointer font-semibold"
+                >
+                  Get a free quote
+                </a>
               </div>
-              <a
-                href="/quote-section"
-                className="underline text-[14px] lg:text-[16px] cursor-pointer font-semibold"
-              >
-                Get a free quote
-              </a>
+            </div>
+
+            {/* Service Locations */}
+            <div className="mt-6 md:mt-10 relative group md:max-w-2/3">
+              <div className="relative bg-[#1ca79b] hover:bg-[#159086] rounded-xl px-4 py-3 md:px-6 md:py-4 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-white rounded-full opacity-20 animate-pulse"></div>
+                    <MapPin
+                      className="relative w-5 h-5 md:w-6 md:h-6 text-white flex-shrink-0 animate-bounce"
+                      style={{ animationDuration: "2s" }}
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-[11px] md:text-[12px] font-nunito font-semibold text-white uppercase tracking-wide mb-1">
+                      Service Areas
+                    </div>
+                    <div className="text-[14px] md:text-[16px] lg:text-[18px] font-nunito font-semibold text-white">
+                      {companyInfo.areaServed.slice(0, 4).join(", ")}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

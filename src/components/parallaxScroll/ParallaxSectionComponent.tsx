@@ -39,8 +39,18 @@ const ParallaxSection: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 flex h-full pt-28 md:items-center justify-center px-8 md:px-4">
-        <h1 className="text-[#e6f7fa] font-nunito leading-snug text-[24px] md:text-3xl lg:text-[48px] xl:text-6xl font-normal text-center">
-          Trusted Residential & Commercial Cleaning Experts Across  NT, Victoria, Tasmania & Queensland
+        <h1 className="text-[#e6f7fa] font-poppins leading-tight text-[24px] md:text-3xl lg:text-[48px] xl:text-6xl font-semibold text-center tracking-tight">
+          Professional Cleaning Services for Residential & Commercial Properties
+          <br className="hidden md:block" />
+          <span className="text-[20px] md:text-2xl lg:text-[40px] xl:text-5xl font-medium">
+            Across{" "}
+            <span className="relative inline-block px-3 py-1 md:px-4 md:py-1.5">
+              <span className="absolute inset-0 bg-[#1ca79b]/20 backdrop-blur-sm rounded-lg"></span>
+              <span className="relative text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+                Northern Territory, Victoria, Tasmania & Queensland
+              </span>
+            </span>
+          </span>
         </h1>
       </div>
 

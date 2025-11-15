@@ -7,12 +7,11 @@ export const companyInfo = {
   phone: "+61 415 703 231",
   logo: "/images/logo.png",
   areaServed: [
+    "NT",
     "Victoria",
-    "Northern Territory",
     "Tasmania",
     "Queensland",
     "Darwin",
-    "Palmerston",
   ],
   address: {
     streetAddress: "",
