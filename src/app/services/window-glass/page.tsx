@@ -5,7 +5,7 @@ import { companyInfo } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Window & Glass Cleaning",
   description:
-    "Streak-free interior and exterior window cleaning, tracks, frames and more in Darwin.",
+    "Streak-free interior and exterior window cleaning, tracks, frames and more across Victoria, Northern Territory, Tasmania, and Queensland.",
   alternates: { canonical: "/services/window-glass" },
   openGraph: {
     title: `Window & Glass Cleaning | ${companyInfo.name}`,
@@ -32,19 +32,27 @@ const WindowGlassCleaningPage: FC = () => {
       <div className="flex w-full flex-col lg:flex-row gap-8">
         {/* Left Side Content */}
         <div className="flex-1 lg:w-2/3">
-          <h1 className="text-3xl font-semibold text-[#243056] dark:text-gray-100 font-poppins mb-6">Window and Glass Cleaning</h1>
+          <h1 className="text-3xl font-semibold text-[#243056] dark:text-gray-100 font-poppins mb-6">
+            Window and Glass Cleaning
+          </h1>
           <p className="xl:text-lg font-nunito text-[#243056] dark:text-gray-100 mb-2 xl:mb-4">
-            Our Window and Glass Cleaning service ensures that your windows and glass surfaces are sparkling clean and free of streaks.
+            Our Window and Glass Cleaning service ensures that your windows and
+            glass surfaces are sparkling clean and free of streaks.
           </p>
           <p className="xl:text-lg font-nunito mb-4 text-[#243056] dark:text-gray-100">
-            We use safe and effective techniques to clean both interior and exterior windows, including high and hard-to-reach areas.
+            We use safe and effective techniques to clean both interior and
+            exterior windows, including high and hard-to-reach areas.
           </p>
-          <h3 className="text-xl font-semibold font-poppins text-[#243056] dark:text-gray-100 mb-4">Services Available:</h3>
+          <h3 className="text-xl font-semibold font-poppins text-[#243056] dark:text-gray-100 mb-4">
+            Services Available:
+          </h3>
           <ul className="list-disc pl-6 space-y-2">
             {availableServices.map((service, index) => (
               <li key={index} className="flex items-center gap-2">
                 <FaCheck className="text-[#00ffbb]" /> {/* Tick icon */}
-                <span className="text-[#243056] dark:text-gray-100 font-nunito">{service}</span>
+                <span className="text-[#243056] dark:text-gray-100 font-nunito">
+                  {service}
+                </span>
               </li>
             ))}
           </ul>

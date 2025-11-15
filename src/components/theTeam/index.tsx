@@ -16,7 +16,7 @@ export default function LocallyProudSection() {
           <div className="relative rounded-full bg-white dark:bg-[#0f1216] p-4 shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:shadow-none">
             <div className="rounded-full border-8 border-[#e7f4f2] dark:border-gray-800 overflow-hidden">
               <Image
-                src="/images/aboutUs.jpeg" // put your image in /public/images/
+                src="/images/aboutUs.png" // put your image in /public/images/
                 alt="Front exterior of a modern Darwin home"
                 width={1120}
                 height={1120}
@@ -56,13 +56,14 @@ export default function LocallyProudSection() {
             </p>
 
             <p>
-              Read more below about how we support our local Darwin community.
-              For more information, don’t hesitate to get in touch by calling{" "}
+              Read more below about how we support communities across Victoria,
+              Northern Territory, Tasmania, and Queensland. For more
+              information, don&apos;t hesitate to get in touch by calling{" "}
               <Link
-                href="tel:1300936738"
+                href="tel:+61415703231"
                 className="font-medium text-[#1ca79b] underline decoration-[#1ca79b]/30 underline-offset-4 hover:decoration-[#1ca79b]"
               >
-                1300 936 738
+                +61 415 703 231
               </Link>
               .
             </p>

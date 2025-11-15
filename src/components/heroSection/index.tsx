@@ -36,16 +36,8 @@ export default function HeroSection() {
           </div>
 
           {/* Call to Action */}
-          <div className="md:mt-10 z-100 dark:border-gray-700 dark:border rounded-2xl mt-6 md:max-w-[400px] lg:max-w-[500px] flex divide-x divide-gray-300 dark:divide-gray-700 shadow-lg  overflow-hidden text-black dark:text-gray-100 text-left text-sm font-medium">
-            <div className="bg-white  dark:bg-[#0f1216] px-6 py-2 md:py-4 w-1/2">
-              <div className="text-[14px] lg:text-[16px] text-gray-500 dark:text-gray-300 font-nunito mb-1">
-                CALL US
-              </div>
-              <div className="text-[14px] lg:text-[16px] font-nunito font-semibold">
-                1300 089 845
-              </div>
-            </div>
-            <div className="bg-[#1ca79b] hover:bg-[#159086] px-6 py-2 md:py-4 w-1/2 font-nunito text-white  transition">
+          <div className="md:mt-10 z-100 dark:border-gray-700 dark:border rounded-2xl mt-6 md:max-w-[400px] lg:max-w-[300px] shadow-lg overflow-hidden text-black dark:text-gray-100 text-left text-sm font-medium">
+            <div className="bg-[#1ca79b] hover:bg-[#159086] px-6 py-2 md:py-4 w-full font-nunito text-white transition">
               <div className="text-[14px] lg:text-[16px] mb-1">
                 START ONLINE
               </div>

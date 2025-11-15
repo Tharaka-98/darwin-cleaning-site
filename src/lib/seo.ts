@@ -4,9 +4,16 @@ export const siteUrl =
 export const companyInfo = {
   name: "Clean Space Facilities",
   url: siteUrl,
-  phone: "1300 089 845",
+  phone: "+61 415 703 231",
   logo: "/images/logo.png",
-  areaServed: ["Darwin", "Palmerston", "Northern Territory"],
+  areaServed: [
+    "Victoria",
+    "Northern Territory",
+    "Tasmania",
+    "Queensland",
+    "Darwin",
+    "Palmerston",
+  ],
   address: {
     streetAddress: "",
     addressLocality: "Darwin",

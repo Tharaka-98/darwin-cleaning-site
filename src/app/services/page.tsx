@@ -6,7 +6,7 @@ import { companyInfo } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Explore our full range of residential and commercial cleaning services in Darwin.",
+    "Explore our full range of residential and commercial cleaning services across Victoria, Northern Territory, Tasmania, and Queensland.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: `Our Services | ${companyInfo.name}`,

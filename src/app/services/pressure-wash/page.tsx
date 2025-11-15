@@ -5,7 +5,7 @@ import { companyInfo } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Pressure Wash Cleaning",
   description:
-    "High-pressure cleaning for driveways, patios, roofs and exteriors in Darwin.",
+    "High-pressure cleaning for driveways, patios, roofs and exteriors across Victoria, Northern Territory, Tasmania, and Queensland.",
   alternates: { canonical: "/services/pressure-wash" },
   openGraph: {
     title: `Pressure Wash Cleaning | ${companyInfo.name}`,

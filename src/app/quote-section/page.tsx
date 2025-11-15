@@ -127,14 +127,18 @@ export default function ContactSection() {
 
         <div className="">
           <div className="mb-3">
-            <h3 className="font-medium md:text-lg font-poppins text-[#243056] dark:text-gray-100">📞 Phone</h3>
+            <h3 className="font-medium md:text-lg font-poppins text-[#243056] dark:text-gray-100">
+              📞 Phone
+            </h3>
             <p className="font-poppins text-[14px] md:text-[16px] text-[#243056] dark:text-gray-100">
-              (08) 8297 5210
+              +61 415 703 231
             </p>
           </div>
 
           <div className="mb-3">
-            <h3 className="font-medium md:text-lg font-poppins  text-[#243056] dark:text-gray-100">📧 Email</h3>
+            <h3 className="font-medium md:text-lg font-poppins  text-[#243056] dark:text-gray-100">
+              📧 Email
+            </h3>
             <p className="font-poppins text-[14px] cursor-pointer text-[#243056] dark:text-gray-100 md:text-[16px]">
               <a
                 href="mailto:info@cleanspacesfacilities.com.au"

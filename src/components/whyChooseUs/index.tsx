@@ -51,9 +51,8 @@ export default function WhyChooseUsComponent() {
         <div className="text-[32px] text-black dark:text-white mb-0 md:text-[40px] lg:text-6xl font-poppins xl:text-[70px] font-semibold leading-snug ">
           Why Choose Us
         </div>
-        <p className="text-gray-600 dark:text-gray-300 font-ubuntu text-[14px] mt-2 md:mt-4 xl:mt-6 md:text-[18px] lg:text-[22px] mb-12">
-          Clean Space Facilities Cleaning Company is proud to have achieved the Certificate
-          of Prequalification in OHS/WHS with Cm3.
+        <p className="text-gray-600 dark:text-gray-300 font-ubuntu text-[14px] mt-2 md:mt-4 xl:mt-6 md:text-[18px] text-justify lg:text-[22px] mb-12">
+        At Clean Space Facilities, we bring over 14 years of professional cleaning expertise to every project. Using state-of-the-art equipment and advanced, high-tech cleaning methods, our highly skilled and well-trained team ensures every space is spotless, hygienic, and welcoming. Available 24/7, we deliver consistent, reliable, and exceptional results tailored to your needs, setting the standard for excellence in cleaning services.
         </p>
       </div>
 
