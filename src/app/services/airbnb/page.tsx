@@ -5,7 +5,7 @@ import { companyInfo } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Airbnb Cleaning",
   description:
-    "Turnover and deep cleaning for short-stay properties in Darwin. Linen changes, disinfection and more.",
+    "Turnover and deep cleaning for short-stay properties across Victoria, Northern Territory, Tasmania, and Queensland. Linen changes, disinfection and more.",
   alternates: { canonical: "/services/airbnb" },
   openGraph: {
     title: `Airbnb Cleaning | ${companyInfo.name}`,
@@ -49,7 +49,9 @@ const AirbnbCleaningPage: FC = () => {
             {availableServices.map((service, index) => (
               <li key={index} className="flex items-center gap-2">
                 <FaCheck className="text-[#00ffbb]" /> {/* Tick icon */}
-                <span className="text-[#243056] dark:text-gray-100 font-nunito">{service}</span>
+                <span className="text-[#243056] dark:text-gray-100 font-nunito">
+                  {service}
+                </span>
               </li>
             ))}
           </ul>

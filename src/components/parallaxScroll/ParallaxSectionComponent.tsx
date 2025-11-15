@@ -40,7 +40,7 @@ const ParallaxSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 flex h-full pt-28 md:items-center justify-center px-8 md:px-4">
         <h1 className="text-[#e6f7fa] font-nunito leading-snug text-[24px] md:text-3xl lg:text-[48px] xl:text-6xl font-normal text-center">
-          Darwin’s Trusted Residential & Commercial Cleaning Experts
+          Trusted Residential & Commercial Cleaning Experts Across  NT, Victoria, Tasmania & Queensland
         </h1>
       </div>
 

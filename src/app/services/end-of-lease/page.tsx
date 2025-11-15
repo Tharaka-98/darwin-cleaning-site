@@ -5,7 +5,7 @@ import { companyInfo } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "End of Lease Cleaning",
   description:
-    "Bond-back end of lease cleaning in Darwin. Detailed vacate cleans including ovens, windows, carpets.",
+    "Bond-back end of lease cleaning across Victoria, Northern Territory, Tasmania, and Queensland. Detailed vacate cleans including ovens, windows, carpets.",
   alternates: { canonical: "/services/end-of-lease" },
   openGraph: {
     title: `End of Lease Cleaning | ${companyInfo.name}`,
@@ -50,7 +50,9 @@ const EndOfLeaseCleaningPage: FC = () => {
             {availableServices.map((service, index) => (
               <li key={index} className="flex items-center gap-2">
                 <FaCheck className="text-[#00ffbb]" /> {/* Tick icon */}
-                <span className="text-[#243056] dark:text-gray-100 font-nunito">{service}</span>
+                <span className="text-[#243056] dark:text-gray-100 font-nunito">
+                  {service}
+                </span>
               </li>
             ))}
           </ul>

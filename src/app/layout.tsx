@@ -11,6 +11,7 @@ import "./globals.css";
 import Header from "@/components/header/NavbarComponent";
 import Footer from "@/components/footer/FooterComponent";
 import ThemeToggle from "@/components/theme/ThemeToggle";
+import ScrollToTop from "@/components/scrollToTop/ScrollToTop";
 import {
   companyInfo,
   siteUrl,
@@ -52,14 +53,17 @@ export const metadata: Metadata = {
     template: `%s | ${companyInfo.name}`,
   },
   description:
-    "Professional residential, commercial and specialty cleaning services in Darwin and NT.",
+    "Professional residential, commercial and specialty cleaning services across Victoria, Northern Territory, Tasmania, and Queensland.",
   keywords: [
     "cleaning",
     "home cleaning",
     "office cleaning",
     "commercial cleaning",
-    "Darwin",
+    "Victoria",
     "Northern Territory",
+    "Tasmania",
+    "Queensland",
+    "Darwin",
   ],
   alternates: {
     canonical: siteUrl,
@@ -67,9 +71,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: `${companyInfo.name} - Professional Cleaning Services in Darwin`,
+    title: `${companyInfo.name} - Professional Cleaning Services Across Australia`,
     description:
-      "Expert cleaning services tailored to your needs across Darwin and NT.",
+      "Expert cleaning services tailored to your needs across Victoria, Northern Territory, Tasmania, and Queensland.",
     siteName: companyInfo.name,
     images: [
       {
@@ -84,7 +88,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: companyInfo.name,
     description:
-      "Professional residential, commercial and specialty cleaning services in Darwin and NT.",
+      "Professional residential, commercial and specialty cleaning services across Victoria, Northern Territory, Tasmania, and Queensland.",
     images: [defaultOpenGraphImage],
   },
   robots: {
@@ -153,6 +157,7 @@ export default function RootLayout({
         <div className="fixed right-4 bottom-4 z-[500]">
           {/* <ThemeToggle /> */}
         </div>
+        <ScrollToTop />
         {children}
         <Footer />
       </body>

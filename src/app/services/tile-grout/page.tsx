@@ -5,7 +5,7 @@ import { companyInfo } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Tile & Grout Cleaning",
   description:
-    "Tile and grout cleaning, sealing and polishing for homes and businesses in Darwin.",
+    "Tile and grout cleaning, sealing and polishing for homes and businesses across Victoria, Northern Territory, Tasmania, and Queensland.",
   alternates: { canonical: "/services/tile-grout" },
   openGraph: {
     title: `Tile & Grout Cleaning | ${companyInfo.name}`,
@@ -51,7 +51,9 @@ const TileGroutCleaningPage: FC = () => {
             {availableServices.map((service, index) => (
               <li key={index} className="flex items-center gap-2">
                 <FaCheck className="text-[#00ffbb]" /> {/* Tick icon */}
-                <span className="text-[#243056] dark:text-gray-100 font-nunito">{service}</span>
+                <span className="text-[#243056] dark:text-gray-100 font-nunito">
+                  {service}
+                </span>
               </li>
             ))}
           </ul>

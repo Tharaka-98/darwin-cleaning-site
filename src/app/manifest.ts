@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: companyInfo.name,
     short_name: companyInfo.name,
     description:
-      "Professional residential, commercial and specialty cleaning services in Darwin and NT.",
+      "Professional residential, commercial and specialty cleaning services across Victoria, Northern Territory, Tasmania, and Queensland.",
     start_url: "/",
     background_color: "#ffffff",
     theme_color: "#ffffff",

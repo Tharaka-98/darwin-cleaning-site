@@ -4,7 +4,7 @@ import { companyInfo } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Carpet & Upholstery Cleaning",
   description:
-    "Deep steam carpet cleaning, stain and odour removal, upholstery cleaning in Darwin.",
+    "Deep steam carpet cleaning, stain and odour removal, upholstery cleaning across Victoria, Northern Territory, Tasmania, and Queensland.",
   alternates: { canonical: "/services/carpet-upholstery" },
   openGraph: {
     title: `Carpet & Upholstery Cleaning | ${companyInfo.name}`,
@@ -58,7 +58,9 @@ const CarpetUpholsteryPage = () => {
             {availableServices.map((service, index) => (
               <li key={index} className="flex items-center gap-2">
                 <FaCheck className="text-[#00ffbb]" /> {/* Tick icon */}
-                <span className="text-[#243056] dark:text-gray-100 font-nunito">{service}</span>
+                <span className="text-[#243056] dark:text-gray-100 font-nunito">
+                  {service}
+                </span>
               </li>
             ))}
           </ul>
