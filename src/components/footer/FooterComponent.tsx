@@ -45,7 +45,7 @@ const footerSections: Array<{
         label: "📧 info@cleanspacesfacilities.com.au",
         href: "mailto:info@cleanspacesfacilities.com.au",
       },
-      { label: "📍 1/4, Damaso Place, Woolner, 0820, NT" },
+      { label: "📍 Woolner, 0820, NT" },
     ],
   },
 ];

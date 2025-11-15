@@ -71,20 +71,12 @@ export default function HowItWorksComponent() {
                   key={index}
                   className="relative flex flex-col items-center text-center group h-full"
                 >
-                  {/* Card Background */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${step.bgGradient} dark:from-[#1a2e2a]/50 dark:to-[#1a2332]/50 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}
-                  />
-
                   {/* Content Card */}
                   <div
                     className={`relative w-full h-full flex flex-col bg-white/80 dark:bg-[#0f1216]/80 backdrop-blur-sm border-2 ${step.borderColor}/30 dark:border-gray-700 rounded-3xl p-8 lg:p-10 transition-all duration-300 group-hover:border-[#1ca79b] dark:group-hover:border-[#44a087] group-hover:shadow-2xl group-hover:-translate-y-2`}
                   >
                     {/* Icon Circle with Gradient */}
-                    <div className="relative mb-6">
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-300`}
-                      />
+                    <div className="relative mb-6 flex justify-center">
                       <div
                         className={`relative bg-gradient-to-br ${step.gradient} w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl`}
                       >
