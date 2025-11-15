@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import { companyInfo, siteUrl } from "@/lib/seo";
+import { companyInfo } from "@/lib/seo";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: companyInfo.name,
     short_name: companyInfo.name,
     description:
-      "Professional residential, commercial and specialty cleaning services across Victoria, Northern Territory, Tasmania, and Queensland.",
+      "Clean Space Facilities - Expert residential, commercial, and specialty cleaning services. Serving Victoria, Northern Territory, Tasmania, and Queensland. Book your cleaning service today.",
     start_url: "/",
     background_color: "#ffffff",
     theme_color: "#ffffff",
