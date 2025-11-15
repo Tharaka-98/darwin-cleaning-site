@@ -58,7 +58,7 @@ export default function LocallyProudSection() {
             <p>
               Read more below about how we support communities across Victoria,
               Northern Territory, Tasmania, and Queensland. For more
-              information, don't hesitate to get in touch by calling{" "}
+              information, don&apos;t hesitate to get in touch by calling{" "}
               <Link
                 href="tel:+61415703231"
                 className="font-medium text-[#1ca79b] underline decoration-[#1ca79b]/30 underline-offset-4 hover:decoration-[#1ca79b]"

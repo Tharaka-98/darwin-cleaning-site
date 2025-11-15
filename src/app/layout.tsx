@@ -10,7 +10,6 @@ import {
 import "./globals.css";
 import Header from "@/components/header/NavbarComponent";
 import Footer from "@/components/footer/FooterComponent";
-import ThemeToggle from "@/components/theme/ThemeToggle";
 import ScrollToTop from "@/components/scrollToTop/ScrollToTop";
 import {
   companyInfo,
