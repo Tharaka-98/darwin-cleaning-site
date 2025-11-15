@@ -47,7 +47,7 @@ export default function LocallyProudSection() {
               services.
             </p>
             <p>
-              For us, being Locally Proud is more than just a slogan—it’s a
+              For us, being Locally Proud is more than just a slogan—it&apos;s a
               commitment to keeping our community spaces clean, healthy, and
               welcoming. We work hard to preserve the comfort and hygiene of
               every home and workplace we serve. Experience the difference with
