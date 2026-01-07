@@ -40,7 +40,7 @@ const footerSections: Array<{
     title: "Contacts",
     links: [
       { label: "Get a free quote", href: "/quote-section", underline: true },
-      { label: "📞 +61 415 703 231" },
+      { label: "📞 +61 470 454 571" },
       {
         label: "📧 info@cleanspacesfacilities.com.au",
         href: "mailto:info@cleanspacesfacilities.com.au",

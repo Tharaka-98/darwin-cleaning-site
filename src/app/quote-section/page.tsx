@@ -131,7 +131,7 @@ export default function ContactSection() {
               📞 Phone
             </h3>
             <p className="font-poppins text-[14px] md:text-[16px] text-[#243056] dark:text-gray-100">
-              +61 415 703 231
+              +61 470 454 571
             </p>
           </div>
 
@@ -154,7 +154,7 @@ export default function ContactSection() {
               📍 Head Office Address
             </div>
             <p className="font-poppins text-[14px] md:text-[16px] text-[#243056] dark:text-gray-100">
-              1/4, Damaso Place, Woolner, 0820, NT
+              Woolner, 0820, NT
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function ContactSection() {
             <div className="w-full h-64 mt-8 md:mt ">
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.408269582756!2d138.5599934!3d-34.9297176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0cf4f2f8d4c3f%3A0x123456789abcdef!2s1%2F4%20Damaso%20Place%2C%20Woolner%2C%200820%2C%20NT!5e0!3m2!1sen!2sau!4v1690000000000"
+                src="https://www.google.com/maps?q=Woolner,+0820,+NT&output=embed&zoom=13"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

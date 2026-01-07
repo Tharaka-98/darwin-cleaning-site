@@ -4,7 +4,7 @@ export const siteUrl =
 export const companyInfo = {
   name: "Clean Space Facilities",
   url: siteUrl,
-  phone: "+61 415 703 231",
+  phone: "+61 470 454 571",
   logo: "/images/logo.png",
   areaServed: [
     "NT",

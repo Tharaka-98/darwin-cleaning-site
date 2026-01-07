@@ -60,10 +60,10 @@ export default function LocallyProudSection() {
               Northern Territory, Tasmania, and Queensland. For more
               information, don&apos;t hesitate to get in touch by calling{" "}
               <Link
-                href="tel:+61415703231"
+                href="tel:+61470454571"
                 className="font-medium text-[#1ca79b] underline decoration-[#1ca79b]/30 underline-offset-4 hover:decoration-[#1ca79b]"
               >
-                +61 415 703 231
+                +61 470 454 571
               </Link>
               .
             </p>
