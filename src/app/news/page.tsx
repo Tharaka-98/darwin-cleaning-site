@@ -36,7 +36,7 @@ const ComingSoon: React.FC = () => {
         </button>
         <div className="flex justify-center items-center mt-8 jus gap-2  lg:flex-row">
           <div className="text-pink-700 text-[10px] lg:text-[16px] font-semibold border flex items-center justify-center gap-2 p-2 md:p-1 lg:p-3 rounded-xl">
-            <IoCall /> +61 415 703 231
+            <IoCall /> +61 470 454 571
           </div>
           <div className="text-pink-700 text-[10px] lg:text-[16px] hover:bg-pink-700 hover:text-white cursor-pointer font-semibold border flex items-center justify-center gap-2 p-2 lg:p-3 rounded-xl">
             <Link href="quote-section">Click here for a quote</Link>

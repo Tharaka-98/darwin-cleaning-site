@@ -41,7 +41,7 @@ export default function ScrollToTop() {
     <div className="fixed bottom-6 right-6 z-[600] flex flex-col gap-3">
       {/* Social Media Buttons - Always Visible */}
       <Link
-        href="https://wa.me/61415703231"
+        href="https://wa.me/61470454571"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
